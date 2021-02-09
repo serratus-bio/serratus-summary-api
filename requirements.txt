@@ -4,3 +4,4 @@ Flask-SQLAlchemy
 Flask-SQLAlchemy-Caching
 sqlalchemy-aurora-data-api
 werkzeug==0.16.0
+pytest
