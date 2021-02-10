@@ -1,7 +1,7 @@
 from flask_sqlalchemy_caching import FromCache
 from model.nucleotide import nsra, nfamily, nsequence
 from . import apply_filters
-from app import cache
+from application import cache
 import math
 
 

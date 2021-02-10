@@ -2,7 +2,7 @@ import os
 import tempfile
 import pytest
 
-import app
+import application
 from query.nucleotide import get_family_export
 
 
