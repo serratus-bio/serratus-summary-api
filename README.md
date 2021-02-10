@@ -85,6 +85,26 @@ After creation:
 
 Managed Aurora PostgreSQL instance restored from snapshot of `serratus-aurora` (Aurora Serverless cluster).
 
+#### Restore snapshot
+
+1. Go to `serratus-aurora` > Maintenance & backups > Snapshots.
+2. Select the latest snapshot and **Restore**.
+3. Restore DB Instance
+    - DB Engine: Aurora (PostgreSQL)
+    - Capacity type: Provisioned
+    - DB Instance Class: `db.t3.medium`
+    - DB Instance Identifier: `serratus-aurora-yyyymmdd`
+    - VPC: `serratus-aurora-vpc`
+    - Subnet group: `default`
+    - Public accessibility: **Yes**
+    - AZ: No preference
+    - Enable IAM DB authentication
+4. Wait while instance is being created. This can take ~30m
+5. Go to new instance `serratus-aurora-yyyymmdd` and **Modify**.
+    - Security group: `serratus-aurora-sg`
+    - **Continue**, Apply immediately
+6. Verify `serratus-aurora-yyyymmdd` has Public accessibility = **Yes**.
+
 #### Database user
 
 ```
