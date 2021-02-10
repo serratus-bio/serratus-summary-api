@@ -5,7 +5,6 @@ from query.nucleotide import (
     get_sra_families,
     get_sra_sequences,
     get_family_pagination,
-    get_family_export,
     get_genbank_pagination
 )
 from werkzeug.contrib.cache import SimpleCache
@@ -34,15 +33,6 @@ def get_genbank(genbank):
     result = pagination.items
     return jsonify(result=result, total=total)
 
-
-@app.route('/export/nucleotide/family=<family>')
-def export_family(family):
-    query = {
-        'family': family,
-        **request.args
-    }
-    result = get_family_export(family, **request.args)
-    return jsonify(query=query, result=result)
 
 def get_sra_cache(sra):
     response = sra_cache.get(sra)
