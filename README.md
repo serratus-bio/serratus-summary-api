@@ -12,6 +12,34 @@
 - [`/nucleotide/genbank=EU769558.1?&scoreMin=90&scoreMax=100&page=5`](https://api.serratus.io/nucleotide/genbank=EU769558.1?&scoreMin=90&scoreMax=100&page=5)
 - [`/nucleotide/genbank=EU769558.1?&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90`](https://api.serratus.io/nucleotide/genbank=EU769558.1?&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90)
 
+## Local usage
+
+### Setup
+
+Add file `env.sh`:
+
+```sh
+export SQL_USERNAME=XXXXX
+export SQL_PASSWORD=XXXXX
+```
+
+```sh
+# [optional] create/load virtualenv
+pip install -r requirements.txt
+```
+
+### Start server
+
+```sh
+bash run.sh
+```
+
+### Test
+
+```sh
+bash test.sh
+```
+
 ## SQL indexes for optimal querying
 
 ```sql
@@ -61,10 +89,6 @@ After creation:
     - Provider: AWS Elastic Beanstalk
     - Region: us-east-1
     - Application/environment names from above
-
-### IAM
-
-- `aws-elasticbeanstalk-ec2-role`: Attach policy **AmazonRDSDataFullAccess**
 
 ### Route 53
 

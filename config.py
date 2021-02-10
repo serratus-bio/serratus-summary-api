@@ -1,10 +1,11 @@
-SQLALCHEMY_DATABASE_URI = 'postgresql+auroradataapi://:@/summary'
-SQLALCHEMY_ENGINE_OPTIONS = {
-    'connect_args': {
-        'aurora_cluster_arn': 'arn:aws:rds:us-east-1:797308887321:cluster:serratus-aurora',
-        'secret_arn': 'arn:aws:secretsmanager:us-east-1:797308887321:secret:rds-db-credentials/cluster-KOFPN4Q2TKDBO5FHY6QO5M3S7Q/reader-TCMI1n'
-    }
-}
+import os
+
+
+SQL_ENDPOINT = 'serratus-aurora-20210209-cluster.cluster-ro-ccz9y6yshbls.us-east-1.rds.amazonaws.com'
+SQL_DATABASE = 'summary'
+SQL_USERNAME = os.environ['SQL_USERNAME']
+SQL_PASSWORD = os.environ['SQL_PASSWORD']
+SQLALCHEMY_DATABASE_URI = f'postgresql://{SQL_USERNAME}:{SQL_PASSWORD}@{SQL_ENDPOINT}:5432/{SQL_DATABASE}'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 JSON_SORT_KEYS = False
