@@ -40,21 +40,6 @@ bash run.sh
 bash test.sh
 ```
 
-## SQL indexes for optimal querying
-
-```sql
-CREATE INDEX nfamily_sra_id_index ON nfamily (sra_id);
-CREATE INDEX nfamily_family_name_index ON nfamily (family_name);
-CREATE INDEX nfamily_score_index ON nfamily (score);
-CREATE INDEX nfamily_percent_identity_index ON nfamily (percent_identity);
-
-CREATE INDEX nsequence_sra_id_index ON nsequence (sra_id);
-CREATE INDEX nsequence_genbank_id_index ON nsequence (genbank_id);
-CREATE INDEX nsequence_score_index ON nsequence (score);
-CREATE INDEX nsequence_percent_identity_index ON nsequence (percent_identity);
-CREATE INDEX nsequence_genbank_id_score_index ON nsequence (genbank_id, score);
-```
-
 ## AWS Setup
 
 ### Elastic Beanstalk
@@ -74,6 +59,8 @@ After creation:
     - SSL certificate: `*.serratus.io`
 - Processes
     - Health check path: `/nucleotide/sra=ERR2756788`
+- Environment variables
+    - Add `SQL_USERNAME`, `SQL_PASSWORD` from to `env.sh`
 
 ### CodePipeline
 
@@ -93,6 +80,36 @@ After creation:
 ### Route 53
 
 - `A` record for `api.serratus.io` -> Elastic Beanstalk endpoint
+
+### RDS
+
+Managed Aurora PostgreSQL instance restored from snapshot of `serratus-aurora` (Aurora Serverless cluster).
+
+#### Database user
+
+```
+CREATE ROLE reader WITH LOGIN PASSWORD 'xffibi9OOLHOmDZftMpjaNolrFMwlGUOA6zKSqt0bkI='
+NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION VALID UNTIL 'infinity';
+
+GRANT CONNECT ON DATABASE summary TO reader;
+GRANT USAGE ON SCHEMA public TO reader;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO reader;
+```
+
+#### SQL indexes for optimal querying
+
+```sql
+CREATE INDEX nfamily_sra_id_index ON nfamily (sra_id);
+CREATE INDEX nfamily_family_name_index ON nfamily (family_name);
+CREATE INDEX nfamily_score_index ON nfamily (score);
+CREATE INDEX nfamily_percent_identity_index ON nfamily (percent_identity);
+
+CREATE INDEX nsequence_sra_id_index ON nsequence (sra_id);
+CREATE INDEX nsequence_genbank_id_index ON nsequence (genbank_id);
+CREATE INDEX nsequence_score_index ON nsequence (score);
+CREATE INDEX nsequence_percent_identity_index ON nsequence (percent_identity);
+CREATE INDEX nsequence_genbank_id_score_index ON nsequence (genbank_id, score);
+```
 
 ## Debugging
 
