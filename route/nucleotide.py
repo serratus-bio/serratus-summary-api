@@ -7,7 +7,7 @@ from query.nucleotide import (
     get_family_pagination,
     get_genbank_pagination
 )
-from werkzeug.contrib.cache import SimpleCache
+from cachelib.simple import SimpleCache
 from config import CACHE_DEFAULT_TIMEOUT
 
 

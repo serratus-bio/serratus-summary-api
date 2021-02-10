@@ -11,6 +11,7 @@ from query.nucleotide import (
     get_family_pagination,
     get_genbank_pagination
 )
+from route.nucleotide import get_sra, sra_cache
 
 
 def test_sra():
@@ -24,6 +25,12 @@ def test_sra():
     result = get_sra_sequences('ERR2756788')
     assert len(result) == 349
     assert result[0] == nsequence(sra_id='ERR2756788', family_name='Coronaviridae', genbank_id='HQ728485.1', coverage_bins=':a..__uu__a_________o____', score=28, percent_identity=85, depth=0.7, n_reads=119, n_global_reads=98, length=13015, genbank_name='Miniopterus bat coronavirus/Kenya/KY33/2006 polyprotein (ORF1ab) gene, partial cds; and spike protein (S), ORF3 protein (ORF3), envelope protein (E), membrane protein (M), nucleocapsid protein (N), and hypothetical protein ORFx (ORFx) genes, complete cds')
+
+
+def test_sra_cache():
+    orig = get_sra('ERR2756788')
+    cache = sra_cache.get('ERR2756788')
+    assert orig.data == cache.data
 
 
 def test_family():
