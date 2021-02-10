@@ -36,6 +36,7 @@ def test_sra_cache():
 def test_family():
     pagination = get_family_pagination('Coronaviridae', scoreMin=100)
     assert len(pagination.items) == 20
+    assert pagination.items[0] == nfamily(sra_id='SRR9966511', family_name='Coronaviridae', coverage_bins='mUmmUmmmUmUmmUmmUUmmUmUmm', score=100, percent_identity=99, depth=14.9, n_reads=2923, n_global_reads=401, length=30000)
     assert pagination.total == 2839
 
     pagination = get_family_pagination('Coronaviridae', scoreMin=100, perPage=3)
@@ -45,6 +46,7 @@ def test_family():
 def test_genbank():
     pagination = get_genbank_pagination('EU769558.1', scoreMax=50)
     assert len(pagination.items) == 20
+    assert pagination.items[0] == nsequence(sra_id='ERR2756788', family_name='Coronaviridae', genbank_id='EU769558.1', coverage_bins='aUAUmmm__________________', score=45, percent_identity=85, depth=9.6, n_reads=1694, n_global_reads=399, length=14335, genbank_name='Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds')
     assert pagination.total == 365
 
     pagination = get_genbank_pagination('EU769558.1', scoreMax=50, perPage=3)
