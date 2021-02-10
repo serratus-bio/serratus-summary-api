@@ -2,7 +2,8 @@ import os
 import tempfile
 import pytest
 
-from app.query.nucleotide import get_family_export
+import app
+from query.nucleotide import get_family_export
 
 
 def test_family_export():

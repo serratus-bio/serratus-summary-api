@@ -1,2 +1,2 @@
-export PYTHONPATH="$PYTHONPATH:app"
+export PYTHONPATH="$PYTHONPATH:./"
 pytest
