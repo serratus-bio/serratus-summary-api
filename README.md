@@ -19,8 +19,8 @@
 Add file `env.sh`:
 
 ```sh
-export SQL_USERNAME=XXXXX
-export SQL_PASSWORD=XXXXX
+export SQL_USERNAME=web_api
+export SQL_PASSWORD=serratus
 ```
 
 ```sh
@@ -105,15 +105,18 @@ Managed Aurora PostgreSQL instance restored from snapshot of `serratus-aurora` (
     - **Continue**, Apply immediately
 6. Verify `serratus-aurora-yyyymmdd` has Public accessibility = **Yes**.
 
-#### Database user
+#### Create database users
 
-```
-CREATE ROLE reader WITH LOGIN PASSWORD 'xffibi9OOLHOmDZftMpjaNolrFMwlGUOA6zKSqt0bkI='
-NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION VALID UNTIL 'infinity';
+```sql
+-- group
+CREATE ROLE viewer NOSUPERUSER NOINHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
+GRANT CONNECT ON DATABASE summary TO viewer;
+GRANT USAGE ON SCHEMA public TO viewer;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO viewer;
 
-GRANT CONNECT ON DATABASE summary TO reader;
-GRANT USAGE ON SCHEMA public TO reader;
-GRANT SELECT ON ALL TABLES IN SCHEMA public TO reader;
+-- users
+CREATE USER tantalus WITH PASSWORD 'serratus' IN ROLE viewer;
+CREATE USER web_api WITH PASSWORD 'serratus' IN ROLE viewer;
 ```
 
 #### SQL indexes for optimal querying
