@@ -4,4 +4,3 @@ flask-cors
 Flask-SQLAlchemy
 Flask-SQLAlchemy-Caching
 psycopg2-binary
-pytest
