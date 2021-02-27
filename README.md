@@ -96,3 +96,4 @@ See https://github.com/ababaian/serratus/wiki/Serratus-SQL-Database-Management
 - `/rdrp/*`
 - handle timeouts e.g.
     > DatabaseError: current transaction is aborted, commands ignored until end of transaction block
+- investigate `CACHE_TYPE = 'filesystem'` and `CACHE_THRESHOLD`
