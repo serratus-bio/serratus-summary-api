@@ -43,3 +43,21 @@ def get_pagination(page=1, perPage=20, **kwargs):
         .options(FromCache(cache)))
     query = apply_filters(query, table, **kwargs)
     return query.paginate(page, perPage)
+
+def get_matches(**kwargs):
+    if 'family' in kwargs:
+        key = 'family'
+    elif 'genbank' in kwargs:
+        key = 'genbank'
+
+    value = kwargs.pop(key)
+    table = tableMap[key]
+    filter_col = getattr(table, table.filter_col_name)
+
+    query = (table.query
+        .filter(filter_col == value)
+        .with_entities(table.sra_id)
+        .options(FromCache(cache)))
+    query = apply_filters(query, table, **kwargs)
+    sra_ids = (row[0] for row in query.all())
+    return sra_ids

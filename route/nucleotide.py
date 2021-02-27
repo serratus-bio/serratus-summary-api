@@ -1,10 +1,11 @@
-from flask import jsonify, request
+from flask import jsonify, request, Response
 from flask import current_app as app
 from query.nucleotide import (
     get_sra_properties,
     get_sra_families,
     get_sra_sequences,
     get_pagination,
+    get_matches,
 )
 from cachelib.simple import SimpleCache
 from config import CACHE_DEFAULT_TIMEOUT
@@ -22,6 +23,11 @@ def get_pagination_route():
     total = pagination.total
     result = pagination.items
     return jsonify(result=result, total=total)
+
+@app.route('/matches/nucleotide')
+def get_matches_route():
+    sra_ids = get_matches(**request.args)
+    return Response('\n'.join(sra_ids), mimetype='text/plain')
 
 def get_sra_cache(sra):
     response = sra_cache.get(sra)
