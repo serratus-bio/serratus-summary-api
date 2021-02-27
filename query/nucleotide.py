@@ -25,15 +25,15 @@ tableMap = {
     'genbank': nsequence
 }
 
-def get_pagination(page=1, perPage=20, **kwargs):
+def get_pagination(page=1, perPage=20, **url_params):
     page = int(page)
     perPage = int(perPage)
-    if 'family' in kwargs:
+    if 'family' in url_params:
         key = 'family'
-    elif 'genbank' in kwargs:
+    elif 'genbank' in url_params:
         key = 'genbank'
 
-    value = kwargs.pop(key)
+    value = url_params.pop(key)
     table = tableMap[key]
     filter_col = getattr(table, table.filter_col_name)
 
@@ -41,16 +41,16 @@ def get_pagination(page=1, perPage=20, **kwargs):
         .filter(filter_col == value)
         .order_by(table.score.desc())
         .options(FromCache(cache)))
-    query = apply_filters(query, table, **kwargs)
+    query = apply_filters(query, table, **url_params)
     return query.paginate(page, perPage)
 
-def get_matches(**kwargs):
-    if 'family' in kwargs:
+def get_matches(**url_params):
+    if 'family' in url_params:
         key = 'family'
-    elif 'genbank' in kwargs:
+    elif 'genbank' in url_params:
         key = 'genbank'
 
-    value = kwargs.pop(key)
+    value = url_params.pop(key)
     table = tableMap[key]
     filter_col = getattr(table, table.filter_col_name)
 
@@ -58,6 +58,6 @@ def get_matches(**kwargs):
         .filter(filter_col == value)
         .with_entities(table.sra_id)
         .options(FromCache(cache)))
-    query = apply_filters(query, table, **kwargs)
+    query = apply_filters(query, table, **url_params)
     sra_ids = (row[0] for row in query.all())
     return sra_ids
