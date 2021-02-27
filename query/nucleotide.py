@@ -18,31 +18,12 @@ def get_sra_sequences(sra):
     query = nsequence.query.filter(nsequence.sra_id == sra)
     return query.all()
 
-# pagination
+# matches
 
 tableMap = {
     'family': nfamily,
     'genbank': nsequence
 }
-
-def get_pagination(page=1, perPage=20, **url_params):
-    page = int(page)
-    perPage = int(perPage)
-    if 'family' in url_params:
-        key = 'family'
-    elif 'genbank' in url_params:
-        key = 'genbank'
-
-    value = url_params.pop(key)
-    table = tableMap[key]
-    filter_col = getattr(table, table.filter_col_name)
-
-    query = (table.query
-        .filter(filter_col == value)
-        .order_by(table.score.desc())
-        .options(FromCache(cache)))
-    query = apply_filters(query, table, **url_params)
-    return query.paginate(page, perPage)
 
 def get_matches(**url_params):
     if 'family' in url_params:
@@ -61,3 +42,22 @@ def get_matches(**url_params):
     query = apply_filters(query, table, **url_params)
     sra_ids = (row[0] for row in query.all())
     return sra_ids
+
+def get_matches_paginated(page=1, perPage=20, **url_params):
+    page = int(page)
+    perPage = int(perPage)
+    if 'family' in url_params:
+        key = 'family'
+    elif 'genbank' in url_params:
+        key = 'genbank'
+
+    value = url_params.pop(key)
+    table = tableMap[key]
+    filter_col = getattr(table, table.filter_col_name)
+
+    query = (table.query
+        .filter(filter_col == value)
+        .order_by(table.score.desc())
+        .options(FromCache(cache)))
+    query = apply_filters(query, table, **url_params)
+    return query.paginate(page, perPage)

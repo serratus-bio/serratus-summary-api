@@ -4,8 +4,8 @@ from query.nucleotide import (
     get_sra_properties,
     get_sra_families,
     get_sra_sequences,
-    get_pagination,
     get_matches,
+    get_matches_paginated,
 )
 from cachelib.simple import SimpleCache
 from config import CACHE_DEFAULT_TIMEOUT
@@ -14,20 +14,20 @@ from config import CACHE_DEFAULT_TIMEOUT
 sra_cache = SimpleCache()
 
 @app.route('/summary/nucleotide/sra=<sra>')
-def get_sra(sra):
+def get_sra_route(sra):
     return get_sra_cache(sra)
-
-@app.route('/matches/nucleotide/paged')
-def get_pagination_route():
-    pagination = get_pagination(**request.args)
-    total = pagination.total
-    result = pagination.items
-    return jsonify(result=result, total=total)
 
 @app.route('/matches/nucleotide')
 def get_matches_route():
     sra_ids = get_matches(**request.args)
     return Response('\n'.join(sra_ids), mimetype='text/plain')
+
+@app.route('/matches/nucleotide/paged')
+def get_matches_paginated_route():
+    pagination = get_matches_paginated(**request.args)
+    total = pagination.total
+    result = pagination.items
+    return jsonify(result=result, total=total)
 
 def get_sra_cache(sra):
     response = sra_cache.get(sra)

@@ -8,10 +8,10 @@ from query.nucleotide import (
     get_sra_properties,
     get_sra_families,
     get_sra_sequences,
-    get_family_pagination,
-    get_genbank_pagination
+    get_matches,
+    get_matches_paginated,
 )
-from route.nucleotide import get_sra, sra_cache
+from route.nucleotide import get_sra_route, sra_cache
 
 
 def test_sra():
@@ -28,26 +28,38 @@ def test_sra():
 
 
 def test_sra_cache():
-    orig = get_sra('ERR2756788')
+    orig = get_sra_route('ERR2756788')
     cache = sra_cache.get('ERR2756788')
     assert orig.data == cache.data
 
 
-def test_family():
-    pagination = get_family_pagination('Coronaviridae', scoreMin=100)
+def test_list_family():
+    sra_ids = list(get_matches(family='Coronaviridae', scoreMin=100))
+    assert sra_ids[:10] == ['ERR1298527', 'ERR1298522', 'ERR1298523', 'ERR1298528', 'ERR1298526', 'ERR1298524', 'ERR1298525', 'ERR1298529', 'ERR1190994', 'ERR1190995']
+    assert len(sra_ids) == 2839
+
+
+def test_list_genbank():
+    sra_ids = list(get_matches(genbank='EU769558.1', scoreMax=50))
+    assert sra_ids[:10] == ['DRR207900', 'DRR207910', 'DRR050642', 'DRR031699', 'ERR209483', 'ERR209506', 'ERR209339', 'ERR2402431', 'ERR209344', 'ERR2587676']
+    assert len(sra_ids) == 365
+
+
+def test_paginate_family():
+    pagination = get_matches_paginated(family='Coronaviridae', scoreMin=100)
     assert len(pagination.items) == 20
     assert pagination.items[0] == nfamily(sra_id='SRR9966511', family_name='Coronaviridae', coverage_bins='mUmmUmmmUmUmmUmmUUmmUmUmm', score=100, percent_identity=99, depth=14.9, n_reads=2923, n_global_reads=401, length=30000)
     assert pagination.total == 2839
 
-    pagination = get_family_pagination('Coronaviridae', scoreMin=100, perPage=3)
+    pagination = get_matches_paginated(family='Coronaviridae', scoreMin=100, perPage=3)
     assert len(pagination.items) == 3
 
 
-def test_genbank():
-    pagination = get_genbank_pagination('EU769558.1', scoreMax=50)
+def test_paginate_genbank():
+    pagination = get_matches_paginated(genbank='EU769558.1', scoreMax=50)
     assert len(pagination.items) == 20
     assert pagination.items[0] == nsequence(sra_id='ERR2756788', family_name='Coronaviridae', genbank_id='EU769558.1', coverage_bins='aUAUmmm__________________', score=45, percent_identity=85, depth=9.6, n_reads=1694, n_global_reads=399, length=14335, genbank_name='Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds')
     assert pagination.total == 365
 
-    pagination = get_genbank_pagination('EU769558.1', scoreMax=50, perPage=3)
+    pagination = get_matches_paginated(genbank='EU769558.1', scoreMax=50, perPage=3)
     assert len(pagination.items) == 3
