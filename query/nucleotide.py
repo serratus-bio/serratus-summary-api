@@ -18,26 +18,28 @@ def get_sra_sequences(sra):
     query = nsequence.query.filter(nsequence.sra_id == sra)
     return query.all()
 
-# family
+# pagination
 
-def get_family_pagination(family, page=1, perPage=20, **kwargs):
+tableMap = {
+    'family': nfamily,
+    'genbank': nsequence
+}
+
+def get_pagination(page=1, perPage=20, **kwargs):
     page = int(page)
     perPage = int(perPage)
-    query = (nfamily.query
-        .filter(nfamily.family_name == family)
-        .order_by(nfamily.score.desc())
-        .options(FromCache(cache)))
-    query = apply_filters(query, nfamily, **kwargs)
-    return query.paginate(page, perPage)
+    if 'family' in kwargs:
+        key = 'family'
+    elif 'genbank' in kwargs:
+        key = 'genbank'
 
-# genbank
+    value = kwargs.pop(key)
+    table = tableMap[key]
+    filter_col = getattr(table, table.filter_col_name)
 
-def get_genbank_pagination(genbank, page=1, perPage=20, **kwargs):
-    page = int(page)
-    perPage = int(perPage)
-    query = (nsequence.query
-        .filter(nsequence.genbank_id == genbank)
-        .order_by(nsequence.score.desc())
+    query = (table.query
+        .filter(filter_col == value)
+        .order_by(table.score.desc())
         .options(FromCache(cache)))
-    query = apply_filters(query, nsequence, **kwargs)
+    query = apply_filters(query, table, **kwargs)
     return query.paginate(page, perPage)

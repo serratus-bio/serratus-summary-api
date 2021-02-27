@@ -2,15 +2,15 @@
 
 ## Example routes
 
-- [`/nucleotide/sra=ERR2756788`](https://api.serratus.io/nucleotide/sra=ERR2756788)
-- [`/nucleotide/family=Coronaviridae`](https://api.serratus.io/nucleotide/family=Coronaviridae)
-- [`/nucleotide/family=Coronaviridae?page=5&perPage=10`](https://api.serratus.io/nucleotide/family=Coronaviridae?page=5&perPage=10)
-- [`/nucleotide/family=Coronaviridae?scoreMin=90&scoreMax=100&page=5`](https://api.serratus.io/nucleotide/family=Coronaviridae?scoreMin=90&scoreMax=100&page=5)
-- [`/nucleotide/family=Coronaviridae?&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90`](https://api.serratus.io/nucleotide/family=Coronaviridae?&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90)
-- [`/nucleotide/genbank=EU769558.1`](https://api.serratus.io/nucleotide/genbank=EU769558.1)
-- [`/nucleotide/genbank=EU769558.1?page=5`](https://api.serratus.io/nucleotide/genbank=EU769558.1?page=5)
-- [`/nucleotide/genbank=EU769558.1?&scoreMin=90&scoreMax=100&page=5`](https://api.serratus.io/nucleotide/genbank=EU769558.1?&scoreMin=90&scoreMax=100&page=5)
-- [`/nucleotide/genbank=EU769558.1?&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90`](https://api.serratus.io/nucleotide/genbank=EU769558.1?&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90)
+- [`/summary/nucleotide/sra=ERR2756788`](https://api.serratus.io/summary/nucleotide/sra=ERR2756788)
+- [`/matches/nucleotide/paged?family=Coronaviridae`](https://api.serratus.io/matches/nucleotide/paged?family=Coronaviridae)
+- [`/matches/nucleotide/paged?family=Coronaviridae&page=5&perPage=10`](https://api.serratus.io/matches/nucleotide/paged?family=Coronaviridae&page=5&perPage=10)
+- [`/matches/nucleotide/paged?family=Coronaviridae&scoreMin=90&scoreMax=100&page=5`](https://api.serratus.io/matches/nucleotide/paged?family=Coronaviridae&scoreMin=90&scoreMax=100&page=5)
+- [`/matches/nucleotide/paged?family=Coronaviridae&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90`](https://api.serratus.io/matches/nucleotide/paged?family=Coronaviridae&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90)
+- [`/matches/nucleotide/paged?genbank=EU769558.1`](https://api.serratus.io/matches/nucleotide/paged?genbank=EU769558.1)
+- [`/matches/nucleotide/paged?genbank=EU769558.1&page=5`](https://api.serratus.io/matches/nucleotide/paged?genbank=EU769558.1&page=5)
+- [`/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&page=5`](https://api.serratus.io/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&page=5)
+- [`/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90`](https://api.serratus.io/nucleotide/genbank=EU769558.1&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90)
 
 ## Local usage
 

@@ -32,6 +32,8 @@ class nfamily(db.Model):
     # top_length : int
     # top_name : str
 
+    filter_col_name = 'family_name'
+
     sra_id = db.Column(db.Text, primary_key=True)
     family_name = db.Column(db.Text, primary_key=True)
     coverage_bins = db.Column(db.Text)
@@ -60,6 +62,8 @@ class nsequence(db.Model):
     n_global_reads : int
     length : int
     genbank_name : str
+
+    filter_col_name = 'genbank_id'
 
     sra_id = db.Column(db.Text, primary_key=True)
     family_name = db.Column(db.Text, primary_key=True)

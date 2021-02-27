@@ -4,8 +4,7 @@ from query.nucleotide import (
     get_sra_properties,
     get_sra_families,
     get_sra_sequences,
-    get_family_pagination,
-    get_genbank_pagination
+    get_pagination,
 )
 from cachelib.simple import SimpleCache
 from config import CACHE_DEFAULT_TIMEOUT
@@ -13,26 +12,16 @@ from config import CACHE_DEFAULT_TIMEOUT
 
 sra_cache = SimpleCache()
 
-@app.route('/nucleotide/sra=<sra>')
+@app.route('/summary/nucleotide/sra=<sra>')
 def get_sra(sra):
     return get_sra_cache(sra)
 
-
-@app.route('/nucleotide/family=<family>')
-def get_family(family):
-    pagination = get_family_pagination(family, **request.args)
+@app.route('/matches/nucleotide/paged')
+def get_pagination_route():
+    pagination = get_pagination(**request.args)
     total = pagination.total
     result = pagination.items
     return jsonify(result=result, total=total)
-
-
-@app.route('/nucleotide/genbank=<genbank>')
-def get_genbank(genbank):
-    pagination = get_genbank_pagination(genbank, **request.args)
-    total = pagination.total
-    result = pagination.items
-    return jsonify(result=result, total=total)
-
 
 def get_sra_cache(sra):
     response = sra_cache.get(sra)
