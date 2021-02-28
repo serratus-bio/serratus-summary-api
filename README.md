@@ -59,7 +59,7 @@ After creation:
     - Protocol: HTTPS
     - SSL certificate: `*.serratus.io`
 - Processes
-    - Health check path: `/nucleotide/sra=ERR2756788`
+    - Health check path: `/summary/nucleotide/sra=ERR2756788`
 - Environment variables
     - Add `SQL_USERNAME`, `SQL_PASSWORD` from to `env.sh`
 
