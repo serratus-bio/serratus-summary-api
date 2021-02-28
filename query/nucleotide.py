@@ -4,18 +4,18 @@ from . import apply_filters
 from application import cache
 
 
-# sra
+# SRA run summary
 
-def get_sra_properties(sra):
-    query = nsra.query.filter(nsra.sra_id == sra)
+def get_run_properties(run_id):
+    query = nsra.query.filter(nsra.sra_id == run_id)
     return query.one()
 
-def get_sra_families(sra):
-    query = nfamily.query.filter(nfamily.sra_id == sra)
+def get_run_families(run_id):
+    query = nfamily.query.filter(nfamily.sra_id == run_id)
     return query.all()
 
-def get_sra_sequences(sra):
-    query = nsequence.query.filter(nsequence.sra_id == sra)
+def get_run_sequences(run_id):
+    query = nsequence.query.filter(nsequence.sra_id == run_id)
     return query.all()
 
 # matches
@@ -41,8 +41,8 @@ def get_matches(**url_params):
         .with_entities(table.sra_id)
         .options(FromCache(cache)))
     query = apply_filters(query, table, **url_params)
-    sra_ids = (row[0] for row in query.all())
-    return sra_ids
+    run_ids = (row[0] for row in query.all())
+    return run_ids
 
 def get_matches_paginated(page=1, perPage=20, **url_params):
     key = get_table_key(**url_params)

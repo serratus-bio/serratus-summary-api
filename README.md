@@ -2,7 +2,7 @@
 
 ## Example routes
 
-- [`/summary/nucleotide/sra=ERR2756788`](https://api.serratus.io/summary/nucleotide/sra=ERR2756788)
+- [`/summary/nucleotide/run=ERR2756788`](https://api.serratus.io/summary/nucleotide/run=ERR2756788)
 - [`/matches/nucleotide/paged?family=Coronaviridae`](https://api.serratus.io/matches/nucleotide/paged?family=Coronaviridae)
 - [`/matches/nucleotide/paged?family=Coronaviridae&page=5&perPage=10`](https://api.serratus.io/matches/nucleotide/paged?family=Coronaviridae&page=5&perPage=10)
 - [`/matches/nucleotide/paged?family=Coronaviridae&scoreMin=90&scoreMax=100&page=5`](https://api.serratus.io/matches/nucleotide/paged?family=Coronaviridae&scoreMin=90&scoreMax=100&page=5)
@@ -59,7 +59,7 @@ After creation:
     - Protocol: HTTPS
     - SSL certificate: `*.serratus.io`
 - Processes
-    - Health check path: `/summary/nucleotide/sra=ERR2756788`
+    - Health check path: `/summary/nucleotide/run=ERR2756788`
 - Environment variables
     - Add `SQL_USERNAME`, `SQL_PASSWORD` from to `env.sh`
 
