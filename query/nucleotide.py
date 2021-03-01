@@ -37,7 +37,7 @@ def get_matches_file(**url_params):
     value = url_params.pop(key)
     table = tableMap[key]
     filter_col = getattr(table, table.filter_col_name)
-    select_column_names = ['sra_id', 'score', 'percent_identity', 'n_reads']
+    select_column_names = ['sra_id', table.filter_col_name, 'score', 'percent_identity', 'n_reads']
     select_columns = [getattr(table, name) for name in select_column_names]
     query = (table.query
         .filter(filter_col == value)
