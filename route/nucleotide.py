@@ -20,7 +20,11 @@ def get_run_route(run_id):
 @app.route('/matches/nucleotide')
 def get_matches_route():
     run_ids = get_matches(**request.args)
-    return Response('\n'.join(run_ids), mimetype='text/plain')
+    filename = 'SerratusMatches.txt'
+    headers = {'Content-Disposition': f'attachment;filename={filename}'}
+    return Response('\n'.join(run_ids),
+                    mimetype='application/text',
+                    headers=headers)
 
 @app.route('/matches/nucleotide/paged')
 def get_matches_paginated_route():
