@@ -8,7 +8,7 @@ from query.nucleotide import (
     get_run_properties,
     get_run_families,
     get_run_sequences,
-    get_matches,
+    get_matches_file,
     get_matches_paginated,
 )
 from route.nucleotide import get_run_route, run_cache
@@ -33,16 +33,16 @@ def test_run_cache():
     assert orig.data == cache.data
 
 
-def test_list_family():
-    run_ids = list(get_matches(family='Coronaviridae', scoreMin=100))
-    assert run_ids[:10] == ['ERR1298527', 'ERR1298522', 'ERR1298523', 'ERR1298528', 'ERR1298526', 'ERR1298524', 'ERR1298525', 'ERR1298529', 'ERR1190994', 'ERR1190995']
-    assert len(run_ids) == 2839
+def test_download_family():
+    contents = get_matches_file(family='Coronaviridae', scoreMin=100)
+    with open('tests/SerratusMatches-family.csv') as f:
+        assert contents == f.read()
 
 
-def test_list_genbank():
-    run_ids = list(get_matches(genbank='EU769558.1', scoreMax=50))
-    assert run_ids[:10] == ['DRR207900', 'DRR207910', 'DRR050642', 'DRR031699', 'ERR209483', 'ERR209506', 'ERR209339', 'ERR2402431', 'ERR209344', 'ERR2587676']
-    assert len(run_ids) == 365
+def test_download_genbank():
+    contents = get_matches_file(genbank='EU769558.1', scoreMax=50)
+    with open('tests/SerratusMatches-genbank.csv') as f:
+        assert contents == f.read()
 
 
 def test_paginate_family():

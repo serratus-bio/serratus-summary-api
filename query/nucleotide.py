@@ -46,7 +46,7 @@ def get_matches_file(**url_params):
     query = apply_filters(query, table, **url_params)
     matches = query.all()
     f = io.StringIO()
-    writer = csv.writer(f)
+    writer = csv.writer(f, lineterminator='\n')
     writer.writerow(select_column_names)
     for match in matches:
         writer.writerow(match)
