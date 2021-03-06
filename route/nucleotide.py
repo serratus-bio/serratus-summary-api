@@ -36,8 +36,8 @@ def get_matches_paginated_route():
 
 @app.route('/counts/nucleotide')
 def get_counts_route():
-    result = get_counts(**request.args)
-    return jsonify(result=result)
+    counts = get_counts(**request.args)
+    return jsonify(counts)
 
 
 def get_run_cache(run_id):
