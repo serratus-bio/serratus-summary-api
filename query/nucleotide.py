@@ -95,5 +95,6 @@ def get_counts(**url_params):
         .with_entities(*select_columns)
         .options(FromCache(cache)))
     query = apply_filters(query, table, **url_params)
-    result = query.all()
-    return result
+    counts = query.all()
+    result_json = [entry._asdict() for entry in counts]
+    return result_json
