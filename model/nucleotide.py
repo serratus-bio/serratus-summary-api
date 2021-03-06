@@ -106,3 +106,22 @@ class nsequence_counts(db.Model):
     score = db.Column(db.Integer)
     percent_identity = db.Column(db.Integer)
     count = db.Column(db.Integer)
+
+
+@dataclass
+class nfamily_list(db.Model):
+    family_name : str
+
+    filter_col_name = 'family_name'
+
+    family_name = db.Column(db.Text, primary_key=True)
+
+
+@dataclass
+class nsequence_list(db.Model):
+    genbank_id : str
+
+    filter_col_name = 'genbank_id'
+
+    genbank_id = db.Column(db.Text, primary_key=True)
+

@@ -3,9 +3,11 @@ from flask_sqlalchemy_caching import FromCache
 from model.nucleotide import (
     nsra,
     nfamily,
-    nfamily_counts,
     nsequence,
+    nfamily_counts,
     nsequence_counts,
+    nfamily_list,
+    nsequence_list,
 )
 from . import apply_filters
 from application import cache
@@ -94,7 +96,25 @@ def get_counts(**url_params):
         .filter(filter_col == value)
         .with_entities(*select_columns)
         .options(FromCache(cache)))
-    query = apply_filters(query, table, **url_params)
     counts = query.all()
     result_json = [entry._asdict() for entry in counts]
+    return result_json
+
+# list
+
+list_table_map = {
+    'family': nfamily_list,
+    'genbank': nsequence_list
+}
+
+def get_list(query_type, **url_params):
+    table = list_table_map[query_type]
+    filter_col = getattr(table, table.filter_col_name)
+    select_column_names = [table.filter_col_name]
+    select_columns = [getattr(table, name) for name in select_column_names]
+    query = (table.query
+        .with_entities(*select_columns)
+        .options(FromCache(cache)))
+    values_list = query.all()
+    result_json = [entry[0] for entry in values_list]
     return result_json

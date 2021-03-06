@@ -7,6 +7,7 @@ from query.nucleotide import (
     get_matches_file,
     get_matches_paginated,
     get_counts,
+    get_list,
 )
 from cachelib.simple import SimpleCache
 from config import CACHE_DEFAULT_TIMEOUT
@@ -39,6 +40,10 @@ def get_counts_route():
     counts = get_counts(**request.args)
     return jsonify(counts)
 
+@app.route('/list/nucleotide/<query_type>')
+def get_list_route(query_type):
+    values_list = get_list(query_type, **request.args)
+    return jsonify(values_list)
 
 def get_run_cache(run_id):
     response = run_cache.get(run_id)

@@ -14,6 +14,8 @@
 - [`/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90`](https://api.serratus.io/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90)
 - [`/counts/nucleotide?family=Coronaviridae`](https://api.serratus.io/counts/nucleotide?family=Coronaviridae)
 - [`/counts/nucleotide?genbank=EU769558.1`](https://api.serratus.io/counts/nucleotide?genbank=EU769558.1)
+- [`/list/nucleotide/family`](https://api.serratus.io/list/nucleotide/family)
+- [`/list/nucleotide/genbank`](https://api.serratus.io/list/nucleotide/genbank)
 
 ## Local usage
 

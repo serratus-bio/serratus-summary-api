@@ -11,6 +11,7 @@ from query.nucleotide import (
     get_matches_file,
     get_matches_paginated,
     get_counts,
+    get_list,
 )
 from route.nucleotide import get_run_route, run_cache
 
@@ -75,3 +76,11 @@ def test_counts():
     assert len(counts) == 43
     print(counts[10])
     assert counts[10] == {'score': 1, 'percent_identity': 100, 'count': 201}
+
+
+def test_list():
+    values_list = get_list('family')
+    assert len(values_list) == 46
+
+    values_list = get_list('genbank')
+    assert len(values_list) == 13187
