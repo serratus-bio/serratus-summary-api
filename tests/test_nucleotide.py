@@ -10,6 +10,7 @@ from query.nucleotide import (
     get_run_sequences,
     get_matches_file,
     get_matches_paginated,
+    get_counts,
 )
 from route.nucleotide import get_run_route, run_cache
 
@@ -63,3 +64,14 @@ def test_paginate_genbank():
 
     pagination = get_matches_paginated(genbank='EU769558.1', scoreMax=50, perPage=3)
     assert len(pagination.items) == 3
+
+
+def test_counts():
+    counts = get_counts(family='Coronaviridae')
+    assert len(counts) == 1320
+    assert counts[10] == {'score': 1, 'percent_identity': 97, 'count': 43356}
+
+    counts = get_counts(genbank='EU769558.1')
+    assert len(counts) == 43
+    print(counts[10])
+    assert counts[10] == {'score': 1, 'percent_identity': 100, 'count': 201}
