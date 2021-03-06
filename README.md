@@ -11,7 +11,8 @@
 - [`/matches/nucleotide/paged?genbank=EU769558.1`](https://api.serratus.io/matches/nucleotide/paged?genbank=EU769558.1)
 - [`/matches/nucleotide/paged?genbank=EU769558.1&page=5`](https://api.serratus.io/matches/nucleotide/paged?genbank=EU769558.1&page=5)
 - [`/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&page=5`](https://api.serratus.io/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&page=5)
-- [`/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90`](https://api.serratus.io/nucleotide/genbank=EU769558.1&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90)
+- [`/matches/nucleotide/paged?genbank=EU769558.1&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90`](https://api.serratus.io/matches/nucleotide/genbank=EU769558.1&scoreMin=90&scoreMax=100&identityMin=80&identityMax=90)
+- [`/counts/nucleotide?genbank=EU769558.1`](https://api.serratus.io/counts/nucleotide/genbank=EU769558.1)
 
 ## Local usage
 

@@ -1,6 +1,12 @@
 import csv, io
 from flask_sqlalchemy_caching import FromCache
-from model.nucleotide import nsra, nfamily, nsequence
+from model.nucleotide import (
+    nsra,
+    nfamily,
+    nfamily_counts,
+    nsequence,
+    nsequence_counts,
+)
 from . import apply_filters
 from application import cache
 
@@ -22,20 +28,20 @@ def get_run_sequences(run_id):
 # matches
 
 # url param key : table model
-tableMap = {
+table_map = {
     'family': nfamily,
     'genbank': nsequence
 }
 
 def get_table_key(**url_params):
-    for key in tableMap:
+    for key in table_map:
         if key in url_params:
             return key
 
 def get_matches_file(**url_params):
     key = get_table_key(**url_params)
     value = url_params.pop(key)
-    table = tableMap[key]
+    table = table_map[key]
     filter_col = getattr(table, table.filter_col_name)
     select_column_names = ['sra_id', table.filter_col_name, 'score', 'percent_identity', 'n_reads']
     select_columns = [getattr(table, name) for name in select_column_names]
@@ -56,7 +62,7 @@ def get_matches_file(**url_params):
 def get_matches_paginated(page=1, perPage=20, **url_params):
     key = get_table_key(**url_params)
     value = url_params.pop(key)
-    table = tableMap[key]
+    table = table_map[key]
     filter_col = getattr(table, table.filter_col_name)
     query = (table.query
         .filter(filter_col == value)
@@ -64,3 +70,30 @@ def get_matches_paginated(page=1, perPage=20, **url_params):
         .options(FromCache(cache)))
     query = apply_filters(query, table, **url_params)
     return query.paginate(int(page), int(perPage))
+
+# counts
+
+count_table_map = {
+    'family': nfamily_counts,
+    'genbank': nsequence_counts
+}
+
+def get_count_table_key(**url_params):
+    for key in count_table_map:
+        if key in url_params:
+            return key
+
+def get_counts(**url_params):
+    key = get_count_table_key(**url_params)
+    value = url_params.pop(key)
+    table = count_table_map[key]
+    filter_col = getattr(table, table.filter_col_name)
+    select_column_names = ['score', 'percent_identity', 'count']
+    select_columns = [getattr(table, name) for name in select_column_names]
+    query = (table.query
+        .filter(filter_col == value)
+        .with_entities(*select_columns)
+        .options(FromCache(cache)))
+    query = apply_filters(query, table, **url_params)
+    result = query.all()
+    return result
