@@ -24,3 +24,9 @@ def server_error(e):
     if isinstance(e, HTTPException):
         return e
     return jsonify(error=repr(e)), 500
+
+@app.after_request
+def add_header(response):
+    response.cache_control.max_age = app.config['RESPONSE_CACHE_CONTROL_MAX_AGE']
+    response.cache_control.public = app.config['RESPONSE_CACHE_CONTROL_PUBLIC']
+    return response
