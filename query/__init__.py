@@ -1,3 +1,6 @@
+
+from .NucleotideSearch import NucleotideSearch
+
 def apply_filters(query, model, scoreMin=None, scoreMax=None, identityMin=None, identityMax=None):
     if scoreMin:
         query = query.filter(model.score >= int(scoreMin))

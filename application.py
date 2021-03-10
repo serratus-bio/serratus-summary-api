@@ -17,7 +17,7 @@ application = app  # for AWS EB
 cors = CORS(app, resources={r"*": {"origins": "*"}})
 cache = Cache(app)
 
-import route.nucleotide
+import route
 
 @app.errorhandler(Exception)
 def server_error(e):
