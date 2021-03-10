@@ -1,9 +1,11 @@
 import csv, io
 from flask_sqlalchemy_caching import FromCache
-from model.nucleotide import (
+from model.tables.nucleotide import (
     nsra,
     nfamily,
     nsequence,
+)
+from model.views.nucleotide import (
     nfamily_counts,
     nsequence_counts,
     nfamily_list,

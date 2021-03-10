@@ -3,7 +3,7 @@ import tempfile
 import pytest
 
 import application
-from model.nucleotide import nsra, nfamily, nsequence
+from model.tables.nucleotide import nsra, nfamily, nsequence
 from query.nucleotide import (
     get_run_properties,
     get_run_families,
