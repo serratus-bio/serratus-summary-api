@@ -1,4 +1,4 @@
-sra_id,family_name,score,percent_identity,n_reads
+run_id,family_name,score,percent_identity,n_reads
 ERR1298527,Coronaviridae,100,99,6474
 ERR1298522,Coronaviridae,100,99,6340
 ERR1298523,Coronaviridae,100,99,6290

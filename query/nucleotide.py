@@ -18,15 +18,15 @@ from application import cache
 # SRA run summary
 
 def get_run_properties(run_id):
-    query = nsra.query.filter(nsra.sra_id == run_id)
+    query = nsra.query.filter(nsra.run_id == run_id)
     return query.one()
 
 def get_run_families(run_id):
-    query = nfamily.query.filter(nfamily.sra_id == run_id)
+    query = nfamily.query.filter(nfamily.run_id == run_id)
     return query.all()
 
 def get_run_sequences(run_id):
-    query = nsequence.query.filter(nsequence.sra_id == run_id)
+    query = nsequence.query.filter(nsequence.run_id == run_id)
     return query.all()
 
 # matches
@@ -47,7 +47,7 @@ def get_matches_file(**url_params):
     value = url_params.pop(key)
     table = table_map[key]
     filter_col = getattr(table, table.filter_col_name)
-    select_column_names = ['sra_id', table.filter_col_name, 'score', 'percent_identity', 'n_reads']
+    select_column_names = ['run_id', table.filter_col_name, 'score', 'percent_identity', 'n_reads']
     select_columns = [getattr(table, name) for name in select_column_names]
     query = (table.query
         .filter(filter_col == value)
