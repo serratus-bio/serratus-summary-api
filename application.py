@@ -18,6 +18,7 @@ cors = CORS(app, resources={r"*": {"origins": "*"}})
 cache = Cache(app)
 
 import route.nucleotide
+import route.rdrp
 
 @app.errorhandler(Exception)
 def server_error(e):
