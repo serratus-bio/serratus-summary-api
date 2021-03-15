@@ -16,13 +16,13 @@ def test_run_summary():
 
 def test_download_family():
     contents = nucleotide_query.get_matches_file(family='Coronaviridae', scoreMin=100)
-    with open('tests/SerratusMatches-family.csv') as f:
+    with open('tests/files/SerratusMatches-nucleotide-family-Coronaviridae.csv') as f:
         assert contents == f.read()
 
 
 def test_download_genbank():
     contents = nucleotide_query.get_matches_file(genbank='EU769558.1', scoreMax=50)
-    with open('tests/SerratusMatches-genbank.csv') as f:
+    with open('tests/files/SerratusMatches-nucleotide-genbank-EU769558.1.csv') as f:
         assert contents == f.read()
 
 
