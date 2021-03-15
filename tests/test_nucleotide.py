@@ -1,7 +1,3 @@
-import os
-import tempfile
-import pytest
-
 import application
 from model.tables.nucleotide import nsra, nfamily, nsequence
 from query import nucleotide_query
