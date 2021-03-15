@@ -1,5 +1,4 @@
-import csv, io
-from flask_sqlalchemy_caching import FromCache
+from .base import QueryBase
 from model.tables.nucleotide import (
     nsra,
     nfamily,
@@ -11,112 +10,25 @@ from model.views.nucleotide import (
     nfamily_list,
     nsequence_list,
 )
-from . import apply_filters
-from application import cache
 
 
-# SRA run summary
-
-def get_run_properties(run_id):
-    query = nsra.query.filter(nsra.run_id == run_id)
-    return query.one()
-
-def get_run_families(run_id):
-    query = nfamily.query.filter(nfamily.run_id == run_id)
-    return query.all()
-
-def get_run_sequences(run_id):
-    query = nsequence.query.filter(nsequence.run_id == run_id)
-    return query.all()
-
-# matches
-
-# url param key : table model
-table_map = {
-    'family': nfamily,
-    'genbank': nsequence
-}
-
-def get_table_key(**url_params):
-    for key in table_map:
-        if key in url_params:
-            return key
-
-def get_matches_file(**url_params):
-    key = get_table_key(**url_params)
-    value = url_params.pop(key)
-    table = table_map[key]
-    filter_col = getattr(table, table.filter_col_name)
-    select_column_names = ['run_id', table.filter_col_name, 'score', 'percent_identity', 'n_reads']
-    select_columns = [getattr(table, name) for name in select_column_names]
-    query = (table.query
-        .filter(filter_col == value)
-        .with_entities(*select_columns)
-        .options(FromCache(cache)))
-    query = apply_filters(query, table, **url_params)
-    matches = query.all()
-    f = io.StringIO()
-    writer = csv.writer(f, lineterminator='\n')
-    writer.writerow(select_column_names)
-    for match in matches:
-        writer.writerow(match)
-    f.seek(0)
-    return f.read()
-
-def get_matches_paginated(page=1, perPage=20, **url_params):
-    key = get_table_key(**url_params)
-    value = url_params.pop(key)
-    table = table_map[key]
-    filter_col = getattr(table, table.filter_col_name)
-    query = (table.query
-        .filter(filter_col == value)
-        .order_by(table.score.desc())
-        .options(FromCache(cache)))
-    query = apply_filters(query, table, **url_params)
-    return query.paginate(int(page), int(perPage))
-
-# counts
-
-count_table_map = {
-    'family': nfamily_counts,
-    'genbank': nsequence_counts
-}
-
-def get_count_table_key(**url_params):
-    for key in count_table_map:
-        if key in url_params:
-            return key
-
-def get_counts(**url_params):
-    key = get_count_table_key(**url_params)
-    value = url_params.pop(key)
-    table = count_table_map[key]
-    filter_col = getattr(table, table.filter_col_name)
-    select_column_names = ['score', 'percent_identity', 'count']
-    select_columns = [getattr(table, name) for name in select_column_names]
-    query = (table.query
-        .filter(filter_col == value)
-        .with_entities(*select_columns)
-        .options(FromCache(cache)))
-    counts = query.all()
-    result_json = [entry._asdict() for entry in counts]
-    return result_json
-
-# list
-
-list_table_map = {
-    'family': nfamily_list,
-    'genbank': nsequence_list
-}
-
-def get_list(query_type, **url_params):
-    table = list_table_map[query_type]
-    filter_col = getattr(table, table.filter_col_name)
-    select_column_names = [table.filter_col_name]
-    select_columns = [getattr(table, name) for name in select_column_names]
-    query = (table.query
-        .with_entities(*select_columns)
-        .options(FromCache(cache)))
-    values_list = query.all()
-    result_json = [entry[0] for entry in values_list]
-    return result_json
+class NucleotideQuery(QueryBase):
+    def __init__(self):
+        self.summary_table_map = {
+            'properties': nsra,
+            'families': nfamily,
+            'sequences': nsequence
+        }
+        # url param key : table model
+        self.table_map = {
+            'family': nfamily,
+            'genbank': nsequence
+        }
+        self.count_table_map = {
+            'family': nfamily_counts,
+            'genbank': nsequence_counts
+        }
+        self.list_table_map = {
+            'family': nfamily_list,
+            'genbank': nsequence_list
+        }
