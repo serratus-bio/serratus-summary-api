@@ -69,7 +69,7 @@ class rfamily(db.Model):
 
 
 @dataclass
-class rdrp(db.Model):
+class rsequence(db.Model):
     run_id : str
     phylum_name : str
     family_name : str

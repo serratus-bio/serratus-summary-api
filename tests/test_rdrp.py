@@ -1,5 +1,5 @@
 import application
-from model.tables.rdrp import rsra, rphylum, rfamily, rdrp
+from model.tables.rdrp import rsra, rphylum, rfamily, rsequence
 from query import rdrp_query
 
 
@@ -38,7 +38,7 @@ def test_paginate_family():
 def test_paginate_sequence():
     pagination = rdrp_query.get_matches_paginated(sequence='NC_001653', scoreMax=50)
     assert len(pagination.items) == 20
-    assert pagination.items[0] == rdrp(run_id='SRR1595854', phylum_name='Deltavirus', family_name='Deltavirus', family_group='Deltavirus-1', virus_name='hdv1', sequence_accession='NC_001653', coverage_bins='_momauuu_woou_________ao_', score=49, percent_identity=81, depth=27.4, n_reads=447, aligned_length=31)
+    assert pagination.items[0] == rsequence(run_id='SRR1595854', phylum_name='Deltavirus', family_name='Deltavirus', family_group='Deltavirus-1', virus_name='hdv1', sequence_accession='NC_001653', coverage_bins='_momauuu_woou_________ao_', score=49, percent_identity=81, depth=27.4, n_reads=447, aligned_length=31)
     assert pagination.total == 166
 
 

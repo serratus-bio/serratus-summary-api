@@ -3,15 +3,15 @@ from model.tables.rdrp import (
     rsra,
     rphylum,
     rfamily,
-    rdrp,
+    rsequence,
 )
 from model.views.rdrp import (
     rphylum_counts,
     rfamily_counts,
-    rdrp_counts,
+    rsequence_counts,
     rphylum_list,
     rfamily_list,
-    rdrp_list,
+    rsequence_list,
 )
 
 
@@ -21,21 +21,21 @@ class RdrpQuery(QueryBase):
             'properties': rsra,
             'phylums': rphylum,
             'families': rfamily,
-            'sequences': rdrp
+            'sequences': rsequence
         }
         # url param key : table model
         self.table_map = {
             'phylum': rphylum,
             'family': rfamily,
-            'sequence': rdrp
+            'sequence': rsequence
         }
         self.count_table_map = {
             'phylum': rphylum_counts,
             'family': rfamily_counts,
-            'sequence': rdrp_counts
+            'sequence': rsequence_counts
         }
         self.list_table_map = {
             'phylum': rphylum_list,
             'family': rfamily_list,
-            'sequence': rdrp_list
+            'sequence': rsequence_list
         }

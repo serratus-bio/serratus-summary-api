@@ -35,7 +35,7 @@ def test_paginate_family():
 def test_paginate_genbank():
     pagination = nucleotide_query.get_matches_paginated(genbank='EU769558.1', scoreMax=50)
     assert len(pagination.items) == 20
-    assert pagination.items[0] == nsequence(run_id='ERR2756788', family_name='Coronaviridae', genbank_id='EU769558.1', coverage_bins='aUAUmmm__________________', score=45, percent_identity=85, depth=9.6, n_reads=1694, n_global_reads=399, length=14335, genbank_name='Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds')
+    assert pagination.items[0] == nsequence(run_id='ERR2756788', family_name='Coronaviridae', sequence_accession='EU769558.1', coverage_bins='aUAUmmm__________________', score=45, percent_identity=85, depth=9.6, n_reads=1694, n_global_reads=399, length=14335, virus_name='Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds')
     assert pagination.total == 365
 
     pagination = nucleotide_query.get_matches_paginated(genbank='EU769558.1', scoreMax=50, perPage=3)

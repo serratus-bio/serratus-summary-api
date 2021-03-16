@@ -1,7 +1,7 @@
 import os
 
 
-SQL_ENDPOINT = 'serratus-aurora-20210314.cluster-ro-ccz9y6yshbls.us-east-1.rds.amazonaws.com'
+SQL_ENDPOINT = 'serratus-aurora-20210315.cluster-ro-ccz9y6yshbls.us-east-1.rds.amazonaws.com'
 SQL_DATABASE = 'summary'
 SQL_USERNAME = os.environ['SQL_USERNAME']
 SQL_PASSWORD = os.environ['SQL_PASSWORD']

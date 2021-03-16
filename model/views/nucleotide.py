@@ -19,17 +19,17 @@ class nfamily_counts(db.Model):
 
 @dataclass
 class nsequence_counts(db.Model):
-    genbank_id : str
+    sequence_accession : str
     score : int
     percent_identity : int
     count : int
 
-    genbank_id = db.Column(db.Text, primary_key=True)
+    sequence_accession = db.Column(db.Text, primary_key=True)
     score = db.Column(db.Integer)
     percent_identity = db.Column(db.Integer)
     count = db.Column(db.Integer)
 
-    filter_col_name = 'genbank_id'
+    filter_col_name = 'sequence_accession'
 
 
 @dataclass
@@ -41,6 +41,6 @@ class nfamily_list(db.Model):
 
 @dataclass
 class nsequence_list(db.Model):
-    genbank_id : str
-    genbank_id = db.Column(db.Text, primary_key=True)
-    filter_col_name = 'genbank_id'
+    sequence_accession : str
+    sequence_accession = db.Column(db.Text, primary_key=True)
+    filter_col_name = 'sequence_accession'

@@ -1,4 +1,4 @@
-run_id,genbank_id,score,percent_identity,n_reads
+run_id,sequence_accession,score,percent_identity,n_reads
 DRR207900,EU769558.1,1,94,1
 DRR207910,EU769558.1,1,94,2
 DRR050642,EU769558.1,2,84,1
