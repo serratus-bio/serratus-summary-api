@@ -16,9 +16,9 @@ def test_download_family():
         assert contents == f.read()
 
 
-def test_download_genbank():
-    contents = nucleotide_query.get_matches_file(genbank='EU769558.1', scoreMax=50)
-    with open('tests/files/SerratusMatches-nucleotide-genbank-EU769558.1.csv') as f:
+def test_download_sequence():
+    contents = nucleotide_query.get_matches_file(sequence='EU769558.1', scoreMax=50)
+    with open('tests/files/SerratusMatches-nucleotide-sequence-EU769558.1.csv') as f:
         assert contents == f.read()
 
 
@@ -32,13 +32,13 @@ def test_paginate_family():
     assert len(pagination.items) == 3
 
 
-def test_paginate_genbank():
-    pagination = nucleotide_query.get_matches_paginated(genbank='EU769558.1', scoreMax=50)
+def test_paginate_sequence():
+    pagination = nucleotide_query.get_matches_paginated(sequence='EU769558.1', scoreMax=50)
     assert len(pagination.items) == 20
     assert pagination.items[0] == nsequence(run_id='ERR2756788', family_name='Coronaviridae', sequence_accession='EU769558.1', coverage_bins='aUAUmmm__________________', score=45, percent_identity=85, depth=9.6, n_reads=1694, n_global_reads=399, length=14335, virus_name='Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds')
     assert pagination.total == 365
 
-    pagination = nucleotide_query.get_matches_paginated(genbank='EU769558.1', scoreMax=50, perPage=3)
+    pagination = nucleotide_query.get_matches_paginated(sequence='EU769558.1', scoreMax=50, perPage=3)
     assert len(pagination.items) == 3
 
 
@@ -47,7 +47,7 @@ def test_counts():
     assert len(counts) == 1320
     assert counts[10] == {'score': 1, 'percent_identity': 97, 'count': 43356}
 
-    counts = nucleotide_query.get_counts(genbank='EU769558.1')
+    counts = nucleotide_query.get_counts(sequence='EU769558.1')
     assert len(counts) == 43
     assert counts[10] == {'score': 1, 'percent_identity': 100, 'count': 201}
 
@@ -56,5 +56,5 @@ def test_list():
     values_list = nucleotide_query.get_list('family')
     assert len(values_list) == 46
 
-    values_list = nucleotide_query.get_list('genbank')
+    values_list = nucleotide_query.get_list('sequence')
     assert len(values_list) == 13187

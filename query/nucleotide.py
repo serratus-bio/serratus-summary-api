@@ -22,13 +22,13 @@ class NucleotideQuery(QueryBase):
         # url param key : table model
         self.table_map = {
             'family': nfamily,
-            'genbank': nsequence
+            'sequence': nsequence
         }
         self.count_table_map = {
             'family': nfamily_counts,
-            'genbank': nsequence_counts
+            'sequence': nsequence_counts
         }
         self.list_table_map = {
             'family': nfamily_list,
-            'genbank': nsequence_list
+            'sequence': nsequence_list
         }
