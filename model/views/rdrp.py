@@ -64,5 +64,7 @@ class rfamily_list(db.Model):
 @dataclass
 class rsequence_list(db.Model):
     sequence_accession : str
+    virus_name : str
     sequence_accession = db.Column(db.Text, primary_key=True)
+    virus_name = db.Column(db.Text)
     filter_col_name = 'sequence_accession'
