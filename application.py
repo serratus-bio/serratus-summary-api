@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from flask_caching import Cache
 from werkzeug.exceptions import HTTPException
+from sqlalchemy.exc import DatabaseError
 
 
 def create_app():
@@ -24,6 +25,9 @@ import route.rdrp
 def server_error(e):
     if isinstance(e, HTTPException):
         return e
+    if isinstance(e, DatabaseError):
+        from model import db
+        db.session.rollback()
     return jsonify(error=repr(e)), 500
 
 @app.after_request
