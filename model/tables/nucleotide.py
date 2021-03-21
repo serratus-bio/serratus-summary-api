@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from sqlalchemy.orm import synonym
 from .. import db
 
 @dataclass
@@ -20,6 +21,7 @@ class nsra(db.Model):
 class nfamily(db.Model):
     run_id : str
     family_name : str
+    family_id : str
     coverage_bins : str
     score : int
     percent_identity : int
@@ -34,6 +36,7 @@ class nfamily(db.Model):
 
     run_id = db.Column(db.Text, primary_key=True)
     family_name = db.Column(db.Text, primary_key=True)
+    family_id = synonym('family_name')
     coverage_bins = db.Column(db.Text)
     score = db.Column(db.Integer)
     percent_identity = db.Column(db.Integer)
@@ -53,6 +56,7 @@ class nfamily(db.Model):
 class nsequence(db.Model):
     run_id : str
     family_name : str
+    family_id : str
     sequence_accession : str
     coverage_bins : str
     score : int
@@ -65,6 +69,7 @@ class nsequence(db.Model):
 
     run_id = db.Column(db.Text, primary_key=True)
     family_name = db.Column(db.Text, primary_key=True)
+    family_id = synonym('family_name')
     sequence_accession = db.Column(db.Text, primary_key=True)
     coverage_bins = db.Column(db.Text)
     score = db.Column(db.Integer)
