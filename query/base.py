@@ -16,6 +16,22 @@ class QueryBase:
                 return_dict[key] = query.all()
         return return_dict
 
+    def get_run_matches_paginated(self, run, family=None, page=1, perPage=20):
+        run_id = run
+        if family:
+            family_id = family
+            table = self.table_map['sequence']
+            query = (table.query
+                .filter(table.run_id == run_id)
+                .filter(table.family_id == family_id)
+                .options(FromCache(cache)))
+        else:
+            table = self.table_map['family']
+            query = (table.query
+                .filter(table.run_id == run_id)
+                .options(FromCache(cache)))
+        return query.paginate(int(page), int(perPage))
+
     # matches
 
     def get_table_key(self, **url_params):

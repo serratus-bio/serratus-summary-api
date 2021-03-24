@@ -16,6 +16,13 @@ def get_matches_route():
                     mimetype='text/csv',
                     headers=headers)
 
+@app.route('/matches/nucleotide/run/paged')
+def get_run_matches_paginated_route():
+    pagination = nucleotide_query.get_run_matches_paginated(**request.args)
+    total = pagination.total
+    result = pagination.items
+    return jsonify(result=result, total=total)
+
 @app.route('/matches/nucleotide/paged')
 def get_matches_paginated_route():
     pagination = nucleotide_query.get_matches_paginated(**request.args)

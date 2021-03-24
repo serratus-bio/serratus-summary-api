@@ -16,6 +16,13 @@ def get_rdrp_matches_route():
                     mimetype='text/csv',
                     headers=headers)
 
+@app.route('/matches/rdrp/run/paged')
+def get_rdrp_run_matches_paginated_route():
+    pagination = rdrp_query.get_run_matches_paginated(**request.args)
+    total = pagination.total
+    result = pagination.items
+    return jsonify(result=result, total=total)
+
 @app.route('/matches/rdrp/paged')
 def get_rdrp_matches_paginated_route():
     pagination = rdrp_query.get_matches_paginated(**request.args)
