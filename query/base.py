@@ -24,11 +24,13 @@ class QueryBase:
             query = (table.query
                 .filter(table.run_id == run_id)
                 .filter(table.family_id == family_id)
+                .order_by(table.score.desc())
                 .options(FromCache(cache)))
         else:
             table = self.table_map['family']
             query = (table.query
                 .filter(table.run_id == run_id)
+                .order_by(table.score.desc())
                 .options(FromCache(cache)))
         return query.paginate(int(page), int(perPage))
 
