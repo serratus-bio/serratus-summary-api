@@ -3,7 +3,7 @@ from .. import db
 
 @dataclass
 class analysis_list(db.Model):
-    analysis_index : str
+    run_id : str
     srarun : str
     nsra : str
     psra : str
@@ -12,7 +12,7 @@ class analysis_list(db.Model):
     micro : str
     geo : str
 
-    analysis_index = db.Column(db.Text, primary_key=True)
+    run_id = db.Column(db.Text, primary_key=True)
     srarun = db.Column(db.Text)
     nsra = db.Column(db.Text)
     psra = db.Column(db.Text)
@@ -21,5 +21,5 @@ class analysis_list(db.Model):
     micro = db.Column(db.Text)
     geo = db.Column(db.Text)
 
-    filter_col_name = 'analysis_index'
+    filter_col_name = 'run_id'
 
