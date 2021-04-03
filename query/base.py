@@ -10,10 +10,7 @@ class QueryBase:
         return_dict = {}
         for key, table in self.index_table_map.items():
             query = table.query.filter(table.run_id == run_id)
-            if key == 'properties':
-                return_dict[key] = query.one()
-            else:
-                return_dict[key] = query.all()
+            return_dict[key] = query.one()
         return return_dict
 
     # summary

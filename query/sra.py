@@ -10,7 +10,6 @@ from model.views.sra import (
 class SraQuery(QueryBase):
     def __init__(self):
         self.index_table_map = {
-            'properties': analysis_index,
-            'index' : analysis_list
+            'analysis_index': analysis_index,
         }
 

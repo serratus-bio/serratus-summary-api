@@ -20,15 +20,16 @@ cache = Cache(app)
 
 import route.nucleotide
 import route.rdrp
+import route.sra
 
-@app.errorhandler(Exception)
-def server_error(e):
-    if isinstance(e, HTTPException):
-        return e
-    if isinstance(e, DatabaseError):
-        from model import db
-        db.session.rollback()
-    return jsonify(error=repr(e)), 500
+# @app.errorhandler(Exception)
+# def server_error(e):
+#    if isinstance(e, HTTPException):
+#        return e
+#    if isinstance(e, DatabaseError):
+#        from model import db
+#        db.session.rollback()
+#    return jsonify(error=repr(e)), 500
 
 @app.after_request
 def add_header(response):
