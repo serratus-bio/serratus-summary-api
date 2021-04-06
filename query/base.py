@@ -4,15 +4,6 @@ from application import cache
 
 
 class QueryBase:
-    # analysis_index
-
-    def get_index(self, run_id):
-        return_dict = {}
-        for key, table in self.index_table_map.items():
-            query = table.query.filter(table.run_id == run_id)
-            return_dict[key] = query.one()
-        return return_dict
-
     # summary
 
     def get_summary(self, run_id):

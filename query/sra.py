@@ -1,15 +1,6 @@
 from .base import QueryBase
-from model.tables.sra import (
-    analysis_index,
-)
-from model.views.sra import (
-    analysis_list,
-)
+from model.tables.sra import analysis_index
 
-
-class SraQuery(QueryBase):
-    def __init__(self):
-        self.index_table_map = {
-            'analysis_index': analysis_index,
-        }
-
+def get_analysis_index(run_id):
+    query = analysis_index.query.filter(analysis_index.run_id == run_id)
+    return query.one()
