@@ -6,16 +6,6 @@ from application import cache
 class QueryBase:
     # summary
 
-    def get_summary(self, run_id):
-        return_dict = {}
-        for key, table in self.summary_table_map.items():
-            query = table.query.filter(table.run_id == run_id)
-            if key == 'properties':
-                return_dict[key] = query.one()
-            else:
-                return_dict[key] = query.all()
-        return return_dict
-
     def get_run_matches_paginated(self, run, family=None, page=1, perPage=20):
         run_id = run
         if family:

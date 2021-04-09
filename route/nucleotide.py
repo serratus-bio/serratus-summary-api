@@ -3,10 +3,6 @@ from flask import current_app as app
 from query import nucleotide_query
 
 
-@app.route('/summary/nucleotide/run=<run_id>')
-def get_run_route(run_id):
-    return jsonify(**nucleotide_query.get_summary(run_id))
-
 @app.route('/matches/nucleotide')
 def get_matches_route():
     contents = nucleotide_query.get_matches_file(**request.args)

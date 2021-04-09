@@ -1,6 +1,5 @@
 from .base import QueryBase
 from model.tables.rdrp import (
-    rsra,
     rphylum,
     rfamily,
     rsequence,
@@ -17,12 +16,6 @@ from model.views.rdrp import (
 
 class RdrpQuery(QueryBase):
     def __init__(self):
-        self.summary_table_map = {
-            'properties': rsra,
-            'phylums': rphylum,
-            'families': rfamily,
-            'sequences': rsequence
-        }
         # url param key : table model
         self.table_map = {
             'phylum': rphylum,

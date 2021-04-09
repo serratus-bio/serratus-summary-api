@@ -43,7 +43,6 @@ def test_paginate_sequence():
 def test_counts():
     counts = get_response_json("/counts/rdrp?family=Coronaviridae")
     assert len(counts) == 1387
-    print(counts[10])
     assert counts[10] == {'score': 1, 'percent_identity': 77, 'count': 10}
 
     counts = get_response_json("/counts/rdrp?sequence=NC_001653")

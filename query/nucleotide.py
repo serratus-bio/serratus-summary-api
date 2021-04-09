@@ -1,6 +1,5 @@
 from .base import QueryBase
 from model.tables.nucleotide import (
-    nsra,
     nfamily,
     nsequence,
 )
@@ -14,11 +13,6 @@ from model.views.nucleotide import (
 
 class NucleotideQuery(QueryBase):
     def __init__(self):
-        self.summary_table_map = {
-            'properties': nsra,
-            'families': nfamily,
-            'sequences': nsequence
-        }
         # url param key : table model
         self.table_map = {
             'family': nfamily,
