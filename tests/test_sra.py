@@ -1,9 +1,6 @@
-import application
-import json
-from route.sra import get_index_run_route
+from . import get_response_data
 
 
 def test_analysis_index_route():
-    response = application.app.test_client().get("/index/run=ERR2756788")
-    data = json.loads(response.get_data(as_text=True))
+    data = get_response_data("/index/run=ERR2756788")
     assert data == {'run_id': 'ERR2756788', 'srarun': True, 'nsra': True, 'psra': True, 'rsra': True, 'assembly': True, 'micro': True, 'geo': False}
