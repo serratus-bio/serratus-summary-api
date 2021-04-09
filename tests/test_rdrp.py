@@ -1,5 +1,4 @@
 from . import get_response_data, get_response_json
-from query import rdrp_query
 
 
 def test_run_summary():
