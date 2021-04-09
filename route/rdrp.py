@@ -3,10 +3,6 @@ from flask import current_app as app
 from query import rdrp_query
 
 
-@app.route('/summary/rdrp/run=<run_id>')
-def get_rdrp_run_route(run_id):
-    return jsonify(**rdrp_query.get_summary(run_id))
-
 @app.route('/matches/rdrp')
 def get_rdrp_matches_route():
     contents = rdrp_query.get_matches_file(**request.args)
