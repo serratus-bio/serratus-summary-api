@@ -6,7 +6,7 @@ from application import cache
 class QueryBase:
     # summary
 
-    def get_run_matches_paginated(self, run, family=None, page=1, perPage=20):
+    def get_run_matches_paginated(self, run, family=None, page=1, perPage=20, **url_params):
         run_id = run
         if family:
             family_id = family
@@ -22,6 +22,7 @@ class QueryBase:
                 .filter(table.run_id == run_id)
                 .order_by(table.score.desc())
                 .options(FromCache(cache)))
+        query = apply_filters(query, table, **url_params)
         return query.paginate(int(page), int(perPage))
 
     # matches
