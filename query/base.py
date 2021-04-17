@@ -6,14 +6,22 @@ from application import cache
 class QueryBase:
     # summary
 
-    def get_run_matches_paginated(self, run, family=None, page=1, perPage=20, **url_params):
+    def get_run_matches_paginated(self, run, familyId=None, familyName=None, page=1, perPage=20, **url_params):
+        if (familyId and familyName):
+            raise ValueError('Cannot specify both familyId and familyName.')
         run_id = run
-        if family:
-            family_id = family
+        if familyId:
             table = self.table_map['sequence']
             query = (table.query
                 .filter(table.run_id == run_id)
-                .filter(table.family_id == family_id)
+                .filter(table.family_id == familyId)
+                .order_by(table.score.desc())
+                .options(FromCache(cache)))
+        elif familyName:
+            table = self.table_map['sequence']
+            query = (table.query
+                .filter(table.run_id == run_id)
+                .filter(table.family_name == familyName)
                 .order_by(table.score.desc())
                 .options(FromCache(cache)))
         else:

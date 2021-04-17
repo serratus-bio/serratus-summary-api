@@ -1,3 +1,4 @@
+import pytest
 from . import get_response_data, get_response_json
 
 
@@ -8,11 +9,17 @@ def test_run_summary():
     pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&scoreMin=20")
     assert pagination['total'] == 5
 
-    pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&family=Coronaviridae-1")
-    assert pagination['total'] == 13
+    pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&familyId=Tombusviridae-14")
+    assert pagination['total'] == 20
 
-    pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&family=Coronaviridae-1&scoreMin=20")
-    assert pagination['total'] == 2
+    pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&familyName=Tombusviridae")
+    assert pagination['total'] == 36
+
+    pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&familyId=Tombusviridae-14&scoreMin=20")
+    assert pagination['total'] == 1
+
+    with pytest.raises(Exception):
+        get_response_json("/matches/rdrp/run/paged?run=ERR2756788&familyName=Tombusviridae&familyId=Tombusviridae-14&scoreMin=20")
 
 
 def test_download_phylum():

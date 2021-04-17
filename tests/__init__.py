@@ -1,8 +1,10 @@
 import application
 import json
+import os
 
 
 def get_response_data(route):
+    os.environ['FLASK_ENV'] = 'development'
     with application.app.test_client() as client:
         response = client.get(route)
     return response.get_data(as_text=True)
