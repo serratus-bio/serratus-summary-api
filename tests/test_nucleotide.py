@@ -5,8 +5,14 @@ def test_run_summary():
     pagination = get_response_json("/matches/nucleotide/run/paged?run=ERR2756788&perPage=10")
     assert len(pagination['result']) == 10
 
+    pagination = get_response_json("/matches/nucleotide/run/paged?run=ERR2756788&scoreMin=20")
+    assert pagination['total'] == 4
+
     pagination = get_response_json("/matches/nucleotide/run/paged?run=ERR2756788&family=Coronaviridae")
     assert pagination['total'] == 231
+
+    pagination = get_response_json("/matches/nucleotide/run/paged?run=ERR2756788&family=Coronaviridae&scoreMin=20")
+    assert pagination['total'] == 5
 
 
 def test_download_family():

@@ -5,8 +5,14 @@ def test_run_summary():
     pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&perPage=10")
     assert len(pagination['result']) == 10
 
+    pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&scoreMin=20")
+    assert pagination['total'] == 5
+
     pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&family=Coronaviridae-1")
     assert pagination['total'] == 13
+
+    pagination = get_response_json("/matches/rdrp/run/paged?run=ERR2756788&family=Coronaviridae-1&scoreMin=20")
+    assert pagination['total'] == 2
 
 
 def test_download_phylum():
