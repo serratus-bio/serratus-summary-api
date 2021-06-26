@@ -33,7 +33,7 @@ def test_download_sequence():
 def test_paginate_family():
     pagination = get_response_json("/matches/nucleotide/paged?family=Coronaviridae&scoreMin=100")
     assert len(pagination['result']) == 20
-    assert pagination['result'][0] == {'run_id': 'SRR9966511', 'family_name': 'Coronaviridae', 'family_id': 'Coronaviridae', 'coverage_bins': 'mUmmUmmmUmUmmUmmUUmmUmUmm', 'score': 100, 'percent_identity': 99, 'depth': 14.9, 'n_reads': 2923, 'n_global_reads': 401, 'length': 30000}
+    assert pagination['result'][0] == {'run_id': 'SRR1192321', 'family_name': 'Coronaviridae', 'family_id': 'Coronaviridae', 'coverage_bins': '^^^^^^^^^^^^^^^^^^^^^^^^^', 'score': 100, 'percent_identity': 100, 'depth': 177221.0, 'n_reads': 133710950, 'n_global_reads': 2790072, 'length': 30000}
     assert pagination['total'] == 2839
 
     pagination = get_response_json("/matches/nucleotide/paged?family=Coronaviridae&scoreMin=100&perPage=3")

@@ -35,15 +35,23 @@ def test_download_sequence():
 def test_paginate_phylum():
     pagination = get_response_json("/matches/rdrp/paged?phylum=Pisuviricota&scoreMin=100")
     assert len(pagination['result']) == 20
-    assert pagination['result'][0] == {'run_id': 'SRR9320190', 'phylum_name': 'Pisuviricota', 'coverage_bins': 'UWAOOAAAAOOAAOAAOAAOMOAAm', 'score': 100, 'percent_identity': 61, 'depth': 2064.0, 'n_reads': 23389, 'aligned_length': 44}
+    assert pagination['result'][0] == {'run_id': 'SRR5633706', 'phylum_name': 'Pisuviricota', 'coverage_bins': '^^^^^^^^^^^^^^^^^^^^^^^^^', 'score': 100, 'percent_identity': 98, 'depth': 64096.8, 'n_reads': 998569, 'aligned_length': 32}
     assert pagination['total'] == 65352
 
 
 def test_paginate_family():
     pagination = get_response_json("/matches/rdrp/paged?family=Coronaviridae&scoreMin=100")
     assert len(pagination['result']) == 20
-    assert pagination['result'][0] == {'run_id': 'DRR220589', 'phylum_name': 'Pisuviricota', 'family_name': 'Coronaviridae', 'family_group': 'Coronaviridae-1', 'family_id': 'Coronaviridae-1', 'coverage_bins': 'aaawaawawaawawaaawwuawwwa', 'score': 100, 'percent_identity': 97, 'depth': 37.1, 'n_reads': 405, 'aligned_length': 46}
+    assert pagination['result'][0] == {'run_id': 'SRR12348234', 'phylum_name': 'Pisuviricota', 'family_name': 'Coronaviridae', 'family_group': 'Coronaviridae-1', 'family_id': 'Coronaviridae-1', 'coverage_bins': 'MMOAM^AOM^^^^^^^^^^^^^^mw', 'score': 100, 'percent_identity': 99, 'depth': 94113.8, 'n_reads': 996256, 'aligned_length': 47}
     assert pagination['total'] == 5310
+
+
+def test_paginate_family_unique():
+    pagination1 = get_response_json("/matches/rdrp/paged?page=1&perPage=10&scoreMin=72&scoreMax=100&identityMin=50&identityMax=87&family=Bornaviridae")
+    matches1 =set(match['run_id'] for match in pagination1['result'])
+    pagination2 = get_response_json("/matches/rdrp/paged?page=2&perPage=10&scoreMin=72&scoreMax=100&identityMin=50&identityMax=87&family=Bornaviridae")
+    matches2 =set(match['run_id'] for match in pagination2['result'])
+    assert len(matches1 & matches2) == 0
 
 
 def test_paginate_sequence():

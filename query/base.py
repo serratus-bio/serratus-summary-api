@@ -16,6 +16,7 @@ class QueryBase:
                 .filter(table.run_id == run_id)
                 .filter(table.family_id == familyId)
                 .order_by(table.score.desc())
+                .order_by(table.n_reads.desc())
                 .options(FromCache(cache)))
         elif familyName:
             table = self.table_map['sequence']
@@ -23,12 +24,14 @@ class QueryBase:
                 .filter(table.run_id == run_id)
                 .filter(table.family_name == familyName)
                 .order_by(table.score.desc())
+                .order_by(table.n_reads.desc())
                 .options(FromCache(cache)))
         else:
             table = self.table_map['family']
             query = (table.query
                 .filter(table.run_id == run_id)
                 .order_by(table.score.desc())
+                .order_by(table.n_reads.desc())
                 .options(FromCache(cache)))
         query = apply_filters(query, table, **url_params)
         return query.paginate(int(page), int(perPage))
@@ -69,6 +72,8 @@ class QueryBase:
         query = (table.query
             .filter(filter_col == value)
             .order_by(table.score.desc())
+            .order_by(table.n_reads.desc())
+            .order_by(table.run_id.desc())
             .options(FromCache(cache)))
         query = apply_filters(query, table, **url_params)
         return query.paginate(int(page), int(perPage))
