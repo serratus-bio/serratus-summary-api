@@ -22,6 +22,7 @@ cache = Cache(app)
 import route.nucleotide
 import route.rdrp
 import route.sra
+import route.palmprint
 
 @app.errorhandler(Exception)
 def server_error(e):
