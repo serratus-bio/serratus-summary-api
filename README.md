@@ -17,6 +17,8 @@
 - [`/counts/nucleotide?sequence=EU769558.1`](https://api.serratus.io/counts/nucleotide?sequence=EU769558.1)
 - [`/list/nucleotide/family`](https://api.serratus.io/list/nucleotide/family)
 - [`/list/nucleotide/sequence`](https://api.serratus.io/list/nucleotide/sequence)
+- [`/palmprint/run=ERR2756788`](https://api.serratus.io/palmprint/run=ERR2756788)
+
 
 ## Local usage
 
