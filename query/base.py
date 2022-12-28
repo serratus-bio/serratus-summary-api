@@ -34,7 +34,7 @@ class QueryBase:
                 .order_by(table.n_reads.desc())
                 .options(FromCache(cache)))
         query = apply_filters(query, table, **url_params)
-        return query.paginate(int(page), int(perPage))
+        return query.paginate(page=int(page), per_page=int(perPage))
 
     # matches
 
@@ -76,7 +76,7 @@ class QueryBase:
             .order_by(table.run_id.desc())
             .options(FromCache(cache)))
         query = apply_filters(query, table, **url_params)
-        return query.paginate(int(page), int(perPage))
+        return query.paginate(page=int(page), per_page=int(perPage))
 
     # counts
 
