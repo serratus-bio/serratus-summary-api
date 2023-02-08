@@ -11,6 +11,7 @@ class analysis_index(db.Model):
     assembly : bool
     micro : bool
     geo : bool
+    assembly_file: str
 
     run_id = db.Column(db.Text, primary_key=True)
     srarun = db.Column(db.Boolean)
@@ -20,5 +21,6 @@ class analysis_index(db.Model):
     assembly = db.Column(db.Boolean)
     micro = db.Column(db.Boolean)
     geo = db.Column(db.Boolean)
+    assembly_file = db.Column(db.Text)
 
     filter_col_name = 'run_id'
