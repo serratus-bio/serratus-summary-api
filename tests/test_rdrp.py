@@ -1,5 +1,6 @@
 import pytest
 from . import get_response_data, get_response_json
+from route.rdrp import validate_args
 
 
 def test_run_summary():
@@ -77,3 +78,59 @@ def test_list():
 
     values_list = get_response_json("/list/rdrp/sequence")
     assert len(values_list) == 14669
+
+
+def test_validate_args():
+    """
+    Test validate_args method
+    """
+    # Test a valid positive integer
+    assert validate_args('5') == 5
+
+    # Test a string that can be converted to a positive integer
+    assert validate_args('25') == 25
+
+    # Test a string that cannot be converted to an integer
+    assert validate_args('abc') == False
+
+    # Test a negative integer
+    assert validate_args('-5') == False
+
+    # Test 0
+    assert validate_args('0') == False
+
+
+def test_rdrp_pos():
+    """
+    Test rdrp_pos endpoint with query parameters
+    """
+    # Test default query (i.e. page = 1, perPage = 20)
+    rdrp_pos = get_response_json("/pos/rdrp")
+    assert len(rdrp_pos['result']) == 20
+    expected_output = {
+      "run_id": "DRR021440",
+      "biosample_id": "SAMD00018407",
+      "release_date": "Tue, 14 Jul 2015 10:38:15 GMT",
+      "tax_id": "318829",
+      "scientific_name": "Pyricularia oryzae",
+      "coordinate_x": -53.073466889,
+      "coordinate_y": -10.769946429,
+      "from_text": "brazil"
+    }
+    assert rdrp_pos['result'][0] == expected_output
+
+    # Test invalid page query param
+    rdrp_pos = get_response_json("/pos/rdrp?page=fail")
+    assert rdrp_pos['message'] == "Invalid page parameter: fail"
+
+    # Test invalid perPage query param
+    rdrp_pos = get_response_json("/pos/rdrp?perPage=fail")
+    assert rdrp_pos['message'] == "Invalid perPage parameter: fail"
+
+    # Test page query param
+    rdrp_pos = get_response_json("/pos/rdrp?page=3")
+    assert not (rdrp_pos['result'][0] == expected_output) # verifies the output is a different page
+
+    # Test perPage query param
+    rdrp_pos = get_response_json("/pos/rdrp?page=1&perPage=5")
+    assert len(rdrp_pos['result']) == 5
