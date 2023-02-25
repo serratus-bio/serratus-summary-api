@@ -1,8 +1,8 @@
-cachelib
-flask
-flask-cors
-Flask-SQLAlchemy
-Flask-SQLAlchemy-Caching
-psycopg2-binary
-pytest
+cachelib==0.9.*
+flask==2.*
+flask-cors==3.*
+Flask-SQLAlchemy==3.*
+Flask-SQLAlchemy-Caching==1.*
+psycopg2-binary==2.*
+pytest==7.*
 SQLAlchemy==1.*
