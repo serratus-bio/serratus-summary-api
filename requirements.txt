@@ -1,7 +1,8 @@
 cachelib
 flask
 flask-cors
-Flask-SQLAlchemy
+Flask-SQLAlchemy==3.0.0
+SQLAlchemy==1.4.18
 Flask-SQLAlchemy-Caching
 psycopg2-binary
 pytest
