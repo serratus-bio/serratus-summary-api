@@ -23,6 +23,7 @@ import route.nucleotide
 import route.rdrp
 import route.sra
 import route.palmprint
+import route.geo
 
 @app.errorhandler(Exception)
 def server_error(e):
