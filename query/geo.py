@@ -1,6 +1,3 @@
-from flask_sqlalchemy_caching import FromCache
-from application import cache
-
 from model.tables.sra import (
     srarun,
 )
@@ -29,8 +26,7 @@ def get_geo_rdrp_paginated(page=1, perPage=500):
         .join(rdrp_pos, srarun_geo_coordinates.run_id == rdrp_pos.run_id)
         .join(srarun, srarun_geo_coordinates.run_id == srarun.run)
         .distinct(srarun_geo_coordinates.run_id)
-        .order_by(srarun_geo_coordinates.run_id)
-        .options(FromCache(cache)))
+        .order_by(srarun_geo_coordinates.run_id))
     pagination = query.paginate(page=int(page), per_page=int(perPage))
     pagination.items = [entry._asdict() for entry in pagination.items]
     return pagination
