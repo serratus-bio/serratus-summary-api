@@ -1,6 +1,4 @@
 import csv, io
-from flask_sqlalchemy_caching import FromCache
-from application import cache
 
 
 class QueryBase:
@@ -16,23 +14,20 @@ class QueryBase:
                 .filter(table.run_id == run_id)
                 .filter(table.family_id == familyId)
                 .order_by(table.score.desc())
-                .order_by(table.n_reads.desc())
-                .options(FromCache(cache)))
+                .order_by(table.n_reads.desc()))
         elif familyName:
             table = self.table_map['sequence']
             query = (table.query
                 .filter(table.run_id == run_id)
                 .filter(table.family_name == familyName)
                 .order_by(table.score.desc())
-                .order_by(table.n_reads.desc())
-                .options(FromCache(cache)))
+                .order_by(table.n_reads.desc()))
         else:
             table = self.table_map['family']
             query = (table.query
                 .filter(table.run_id == run_id)
                 .order_by(table.score.desc())
-                .order_by(table.n_reads.desc())
-                .options(FromCache(cache)))
+                .order_by(table.n_reads.desc()))
         query = apply_filters(query, table, **url_params)
         return query.paginate(page=int(page), per_page=int(perPage))
 
@@ -52,8 +47,7 @@ class QueryBase:
         select_columns = [getattr(table, name) for name in select_column_names]
         query = (table.query
             .filter(filter_col == value)
-            .with_entities(*select_columns)
-            .options(FromCache(cache)))
+            .with_entities(*select_columns))
         query = apply_filters(query, table, **url_params)
         matches = query.all()
         f = io.StringIO()
@@ -73,8 +67,7 @@ class QueryBase:
             .filter(filter_col == value)
             .order_by(table.score.desc())
             .order_by(table.n_reads.desc())
-            .order_by(table.run_id.desc())
-            .options(FromCache(cache)))
+            .order_by(table.run_id.desc()))
         query = apply_filters(query, table, **url_params)
         return query.paginate(page=int(page), per_page=int(perPage))
 
@@ -94,8 +87,7 @@ class QueryBase:
         select_columns = [getattr(table, name) for name in select_column_names]
         query = (table.query
             .filter(filter_col == value)
-            .with_entities(*select_columns)
-            .options(FromCache(cache)))
+            .with_entities(*select_columns))
         counts = query.all()
         result_json = [entry._asdict() for entry in counts]
         return result_json
@@ -110,8 +102,7 @@ class QueryBase:
             select_column_names.append('virus_name')
         select_columns = [getattr(table, name) for name in select_column_names]
         query = (table.query
-            .with_entities(*select_columns)
-            .options(FromCache(cache)))
+            .with_entities(*select_columns))
         values_list = query.all()
         if query_type == 'sequence':  # {accession: name}
             return {entry[0]: entry[1] for entry in values_list}
