@@ -23,7 +23,7 @@ def test_run_summary():
 
 
 def test_download_phylum():
-    contents = get_response_data("/matches/rdrp?phylum=Pisuviricota&scoreMin=100")
+    contents = get_response_data("/matches/rdrp/download?phylum=Pisuviricota&scoreMin=100")
     with open('tests/files/SerratusMatches-rdrp-phylum-Pisuviricota.csv') as f:
         assert contents == f.read()
 

@@ -4,6 +4,15 @@ from query import rdrp_query
 from application import cache
 
 
+@app.route('/matches/rdrp/download')
+def get_rdrp_matches_download_route():
+    contents = rdrp_query.get_matches_file(**request.args)
+    filename = 'SerratusMatches.csv'
+    headers = {'Content-Disposition': f'attachment;filename={filename}'}
+    return Response(contents,
+                    mimetype='text/csv',
+                    headers=headers)
+
 @app.route('/matches/rdrp')
 @cache.cached(query_string=True)
 def get_rdrp_matches_route():

@@ -4,6 +4,15 @@ from query import nucleotide_query
 from application import cache
 
 
+@app.route('/matches/nucleotide/download')
+def get_matches_download_route():
+    contents = nucleotide_query.get_matches_file(**request.args)
+    filename = 'SerratusMatches.csv'
+    headers = {'Content-Disposition': f'attachment;filename={filename}'}
+    return Response(contents,
+                    mimetype='text/csv',
+                    headers=headers)
+
 @app.route('/matches/nucleotide')
 @cache.cached(query_string=True)
 def get_matches_route():

@@ -19,13 +19,13 @@ def test_run_summary():
 
 
 def test_download_family():
-    contents = get_response_data("/matches/nucleotide?family=Coronaviridae&scoreMin=100")
+    contents = get_response_data("/matches/nucleotide/download?family=Coronaviridae&scoreMin=100")
     with open('tests/files/SerratusMatches-nucleotide-family-Coronaviridae.csv') as f:
         assert contents == f.read()
 
 
 def test_download_sequence():
-    contents = get_response_data("/matches/nucleotide?sequence=EU769558.1&scoreMax=50")
+    contents = get_response_data("/matches/nucleotide/download?sequence=EU769558.1&scoreMax=50")
     with open('tests/files/SerratusMatches-nucleotide-sequence-EU769558.1.csv') as f:
         assert contents == f.read()
 
