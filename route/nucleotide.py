@@ -16,12 +16,8 @@ def get_matches_download_route():
 @app.route('/matches/nucleotide')
 @cache.cached(query_string=True)
 def get_matches_route():
-    contents = nucleotide_query.get_matches_file(**request.args)
-    filename = 'SerratusMatches.csv'
-    headers = {'Content-Disposition': f'attachment;filename={filename}'}
-    return Response(contents,
-                    mimetype='text/csv',
-                    headers=headers)
+    result = nucleotide_query.get_matches(**request.args)
+    return jsonify(result)
 
 @app.route('/matches/nucleotide/run/paged')
 @cache.cached(query_string=True)

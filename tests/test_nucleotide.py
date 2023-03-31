@@ -18,16 +18,23 @@ def test_run_summary():
     assert pagination['total'] == 5
 
 
-def test_download_family():
+def test_matches_download_family():
     contents = get_response_data("/matches/nucleotide/download?family=Coronaviridae&scoreMin=100")
     with open('tests/files/SerratusMatches-nucleotide-family-Coronaviridae.csv') as f:
         assert contents == f.read()
 
 
-def test_download_sequence():
+def test_matches_download_sequence():
     contents = get_response_data("/matches/nucleotide/download?sequence=EU769558.1&scoreMax=50")
     with open('tests/files/SerratusMatches-nucleotide-sequence-EU769558.1.csv') as f:
         assert contents == f.read()
+
+
+def test_matches_family():
+    result = get_response_json("/matches/nucleotide?family=Coronaviridae&scoreMin=100&columns=run_id")
+    assert result[0] == {
+        'run_id': 'SRR1192321',
+    }
 
 
 def test_paginate_family():

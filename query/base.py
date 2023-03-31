@@ -38,27 +38,23 @@ class QueryBase:
             if key in url_params:
                 return key
 
-    def get_matches_file(self, **url_params):
-        key = self.get_table_key(**url_params)
-        value = url_params.pop(key)
-        table = self.table_map[key]
-        filter_col = getattr(table, table.filter_col_name)
-        select_column_names = ['run_id', table.filter_col_name, 'score', 'percent_identity', 'n_reads']
-        select_columns = [getattr(table, name) for name in select_column_names]
-        query = (table.query
-            .filter(filter_col == value)
-            .with_entities(*select_columns))
-        query = apply_filters(query, table, **url_params)
-        matches = query.all()
-        f = io.StringIO()
-        writer = csv.writer(f, lineterminator='\n')
-        writer.writerow(select_column_names)
-        for match in matches:
-            writer.writerow(match)
-        f.seek(0)
-        return f.read()
+    def get_columns_from_params(self, **url_params):
+        request_columns = url_params.pop('columns', None)
+        if not request_columns:
+            return []
+        return request_columns.split(',')
 
-    def get_matches_paginated(self, page=1, perPage=20, **url_params):
+    def serialize_matches(self, matches):
+        result = []
+        for row in matches:
+            if hasattr(row, '_asdict'):
+                result.append(row._asdict())
+            else:
+                result.append(dict((col, getattr(row, col))
+                    for col in row.__table__.columns.keys()))
+        return result
+
+    def get_matches_query(self, **url_params):
         key = self.get_table_key(**url_params)
         value = url_params.pop(key)
         table = self.table_map[key]
@@ -66,9 +62,33 @@ class QueryBase:
         query = (table.query
             .filter(filter_col == value)
             .order_by(table.score.desc())
-            .order_by(table.n_reads.desc())
-            .order_by(table.run_id.desc()))
+            .order_by(table.n_reads.desc()))
+        request_columns = self.get_columns_from_params(**url_params)
+        request_columns = [getattr(table, name) for name in request_columns]
+        if request_columns:
+            query = query.with_entities(*request_columns)
         query = apply_filters(query, table, **url_params)
+        return query
+
+    def get_matches(self, **url_params):
+        query = self.get_matches_query(**url_params)
+        results = query.all()
+        return self.serialize_matches(results)
+
+    def get_matches_file(self, **url_params):
+        query = self.get_matches_query(**url_params)
+        results = query.all()
+        matches = self.serialize_matches(results)
+        f = io.StringIO()
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(matches[0].keys())
+        for match in matches:
+            writer.writerow(match.values())
+        f.seek(0)
+        return f.read()
+
+    def get_matches_paginated(self, page=1, perPage=20, **url_params):
+        query = self.get_matches_query(**url_params)
         return query.paginate(page=int(page), per_page=int(perPage))
 
     # counts
@@ -109,7 +129,7 @@ class QueryBase:
         return {entry[0]: None for entry in values_list}
 
 
-def apply_filters(query, model, scoreMin=None, scoreMax=None, identityMin=None, identityMax=None):
+def apply_filters(query, model, scoreMin=None, scoreMax=None, identityMin=None, identityMax=None, **kwargs):
     if scoreMin:
         query = query.filter(model.score >= int(scoreMin))
     if scoreMax:

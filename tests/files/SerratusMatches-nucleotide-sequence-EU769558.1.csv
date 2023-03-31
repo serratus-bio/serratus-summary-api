@@ -1,366 +1,366 @@
-run_id,sequence_accession,score,percent_identity,n_reads
-DRR207900,EU769558.1,1,94,1
-DRR207910,EU769558.1,1,94,2
-DRR050642,EU769558.1,2,84,1
-DRR031699,EU769558.1,1,88,1
-ERR209483,EU769558.1,1,97,5
-ERR209506,EU769558.1,1,97,3
-ERR209339,EU769558.1,1,97,5
-ERR2402431,EU769558.1,1,100,1
-ERR209344,EU769558.1,1,97,1
-ERR2587676,EU769558.1,2,83,1
-ERR2860609,EU769558.1,1,100,1
-ERR2860611,EU769558.1,1,100,1
-ERR2756787,EU769558.1,29,86,131
-ERR2756788,EU769558.1,45,85,1694
-ERR1301942,EU769558.1,2,78,2
-ERR2756798,EU769558.1,3,86,3
-ERR2756799,EU769558.1,5,85,6
-ERR2756800,EU769558.1,3,83,2
-ERR2929113,EU769558.1,1,100,1
-ERR3569452,EU769558.1,40,85,471
-ERR3569488,EU769558.1,41,85,408
-ERR3569490,EU769558.1,5,85,6
-ERR321346,EU769558.1,1,97,1
-ERR2592476,EU769558.1,2,86,1
-ERR4008064,EU769558.1,1,100,1
-ERR321497,EU769558.1,1,97,1
-ERR321520,EU769558.1,1,96,3
-SRR10221770,EU769558.1,6,85,18
-SRR10221771,EU769558.1,6,85,34
-SRR10221772,EU769558.1,1,91,7
-SRR10221773,EU769558.1,1,88,3
-SRR10221774,EU769558.1,5,93,30956
-SRR10221775,EU769558.1,2,80,5
-SRR10221776,EU769558.1,6,87,17
-SRR10221777,EU769558.1,2,80,2
-SRR10221778,EU769558.1,2,81,2
-ERR1726731,EU769558.1,1,100,1
-SRR10221779,EU769558.1,2,84,1
-ERR3586945,EU769558.1,1,100,2
-SRR10221783,EU769558.1,2,74,2
-SRR10221784,EU769558.1,8,79,17
-SRR10221786,EU769558.1,3,74,4
-ERR1301514,EU769558.1,2,82,2
-SRR10221789,EU769558.1,2,79,7
-SRR10131284,EU769558.1,1,100,1
-SRR10131285,EU769558.1,1,100,1
-SRR10131286,EU769558.1,1,100,2
-SRR10131287,EU769558.1,1,100,2
-SRR10221790,EU769558.1,2,84,2
-SRR10221791,EU769558.1,2,79,5
-SRR10221794,EU769558.1,2,77,1
-SRR10144986,EU769558.1,1,100,4
-SRR10144987,EU769558.1,1,100,1
-SRR10221795,EU769558.1,2,77,1
-SRR10221796,EU769558.1,2,75,1
-SRR10221798,EU769558.1,2,81,2
-SRR10221801,EU769558.1,2,81,4
-SRR10119511,EU769558.1,1,100,1
-SRR10221935,EU769558.1,2,78,1
-ERR1301566,EU769558.1,1,98,2
-SRR10606892,EU769558.1,1,100,1
-SRR10027201,EU769558.1,1,100,2
-SRR1049520,EU769558.1,1,100,1
-SRR10806519,EU769558.1,1,100,2
-SRR10894940,EU769558.1,1,100,3
-SRR10894941,EU769558.1,1,100,1
-SRR10733855,EU769558.1,1,100,1
-SRR057900,EU769558.1,1,96,2
-SRR057913,EU769558.1,1,96,2
-SRR11235439,EU769558.1,1,100,2
-SRR11038989,EU769558.1,1,100,2
-SRR11235440,EU769558.1,1,100,1
-SRR11276881,EU769558.1,1,100,1
-SRR057948,EU769558.1,1,96,2
-SRR10916742,EU769558.1,1,100,1
-SRR10916753,EU769558.1,1,100,1
-SRR11085733,EU769558.1,1,97,2
-SRR11085740,EU769558.1,2,87,2
-SRR059174,EU769558.1,2,87,2
-SRR059175,EU769558.1,1,91,2
-ERR3179763,EU769558.1,1,88,2
-SRR11124998,EU769558.1,1,93,1
-SRR10208171,EU769558.1,1,100,1
-ERR599050,EU769558.1,1,100,1
-SRR10605966,EU769558.1,1,89,1
-SRR10319961,EU769558.1,1,100,1
-SRR1106144,EU769558.1,4,100,13
-SRR1106145,EU769558.1,4,100,19
-SRR10868420,EU769558.1,1,100,5
-SRR10868424,EU769558.1,1,100,2
-SRR035256,EU769558.1,1,96,1
-SRR1565898,EU769558.1,1,100,1
-SRR11365056,EU769558.1,1,100,1
-SRR11365058,EU769558.1,1,98,2
-SRR11614696,EU769558.1,1,100,1
-SRR11410021,EU769558.1,1,100,1
-SRR11587830,EU769558.1,1,100,1
-SRR11356437,EU769558.1,1,100,1
-SRR1427108,EU769558.1,1,97,2
-SRR1427110,EU769558.1,1,97,3
-SRR1427111,EU769558.1,1,97,1
-SRR11393420,EU769558.1,1,100,1
-SRR11393427,EU769558.1,1,100,1
-SRR10587791,EU769558.1,2,82,1
-SRR11393430,EU769558.1,1,100,1
-SRR11393436,EU769558.1,1,100,2
-SRR11393446,EU769558.1,1,100,1
-SRR1104916,EU769558.1,1,92,4
-SRR1104917,EU769558.1,1,97,2
-SRR11393457,EU769558.1,1,100,1
-SRR11393467,EU769558.1,1,100,1
-SRR1870910,EU769558.1,1,100,3
-SRR1870985,EU769558.1,1,100,1
-SRR1512207,EU769558.1,1,100,1
-SRR1169952,EU769558.1,1,100,1
-SRR1169953,EU769558.1,1,100,1
-SRR2026321,EU769558.1,1,93,1
-SRR1236078,EU769558.1,1,100,1
-SRR1926493,EU769558.1,1,100,1
-SRR1271057,EU769558.1,1,89,1
-SRR1926587,EU769558.1,1,100,1
-SRR1512395,EU769558.1,1,100,1
-SRR1919328,EU769558.1,1,96,1
-SRR1512439,EU769558.1,1,100,2
-SRR1282063,EU769558.1,1,96,1
-SRR11939929,EU769558.1,1,88,1
-SRR1512509,EU769558.1,1,100,1
-SRR11772023,EU769558.1,1,94,1
-SRR1760428,EU769558.1,2,74,1
-SRR2096033,EU769558.1,1,93,1
-SRR1512570,EU769558.1,1,100,1
-SRR2096039,EU769558.1,1,93,1
-SRR1512576,EU769558.1,1,100,1
-SRR2096041,EU769558.1,1,93,1
-SRR1512603,EU769558.1,1,100,1
-SRR1512606,EU769558.1,1,100,1
-SRR2158277,EU769558.1,1,94,1
-SRR306304,EU769558.1,1,100,1
-SRR11939989,EU769558.1,2,86,1
-SRR11616456,EU769558.1,1,100,2
-SRR309218,EU769558.1,1,93,1
-SRR3095692,EU769558.1,1,97,1
-SRR1512744,EU769558.1,1,100,2
-SRR1925049,EU769558.1,1,100,1
-SRR2032320,EU769558.1,1,100,1
-SRR1512807,EU769558.1,1,100,1
-SRR1925079,EU769558.1,1,100,1
-SRR1925109,EU769558.1,1,100,1
-SRR1925113,EU769558.1,1,100,1
-SRR1925114,EU769558.1,1,100,1
-SRR11183698,EU769558.1,1,100,1
-SRR2096733,EU769558.1,1,94,1
-SRR3389982,EU769558.1,1,95,1
-SRR1557284,EU769558.1,1,100,1
-SRR1557305,EU769558.1,1,100,2
-SRR3100126,EU769558.1,1,100,1
-ERR599326,EU769558.1,1,100,1
-SRR1512036,EU769558.1,1,100,1
-SRR1557460,EU769558.1,1,100,1
-SRR1557463,EU769558.1,1,100,1
-SRR1557473,EU769558.1,1,100,1
-SRR1557482,EU769558.1,1,100,1
-SRR2064678,EU769558.1,2,85,1
-SRR1513091,EU769558.1,1,100,1
-SRR1512101,EU769558.1,1,100,1
-SRR1557579,EU769558.1,1,100,1
-SRR1557622,EU769558.1,1,100,1
-SRR1557641,EU769558.1,1,100,1
-SRR1313315,EU769558.1,1,97,2
-SRR1513178,EU769558.1,1,96,1
-SRR1512196,EU769558.1,1,100,1
-SRR1298789,EU769558.1,1,89,1
-SRR3356526,EU769558.1,1,94,1
-SRR3363046,EU769558.1,1,89,1
-SRR3985674,EU769558.1,1,97,1
-SRR1364309,EU769558.1,1,100,2
-SRR387891,EU769558.1,1,100,1
-SRR1926462,EU769558.1,1,100,1
-SRR4343442,EU769558.1,1,97,1
-SRR4343444,EU769558.1,1,97,1
-SRR2079648,EU769558.1,1,88,1
-SRR3620334,EU769558.1,1,97,1
-SRR3194395,EU769558.1,1,100,1
-SRR2921200,EU769558.1,1,100,3
-SRR3556100,EU769558.1,1,100,1
-SRR3556109,EU769558.1,1,100,2
-SRR3556128,EU769558.1,1,100,1
-SRR3556130,EU769558.1,1,100,2
-SRR445811,EU769558.1,1,100,1
-SRR4050279,EU769558.1,1,100,1
-SRR4050287,EU769558.1,1,100,2
-SRR4247347,EU769558.1,1,96,1
-SRR3290206,EU769558.1,1,100,2
-SRR3290207,EU769558.1,1,100,1
-SRR3556183,EU769558.1,1,100,1
-SRR5040897,EU769558.1,1,92,4
-SRR488276,EU769558.1,1,93,1
-SRR5084467,EU769558.1,1,100,1
-SRR5295650,EU769558.1,7,84,6
-SRR5447166,EU769558.1,1,92,4
-SRR5447167,EU769558.1,10,93,482
-SRR5447169,EU769558.1,1,94,2
-SRR5447171,EU769558.1,1,94,3
-SRR5447172,EU769558.1,1,94,2
-SRR5447173,EU769558.1,1,95,1
-SRR5447174,EU769558.1,1,94,2
-SRR5447175,EU769558.1,1,95,4
-SRR5447178,EU769558.1,1,92,1
-SRR3336944,EU769558.1,1,100,1
-SRR522055,EU769558.1,1,96,1
-SRR5309724,EU769558.1,1,100,1
-SRR3984662,EU769558.1,1,100,1
-SRR5812819,EU769558.1,1,100,1
-SRR5572304,EU769558.1,1,94,1
-SRR5572313,EU769558.1,1,94,1
-SRR5988127,EU769558.1,1,96,1
-SRR6029052,EU769558.1,1,100,1
-SRR5749584,EU769558.1,1,97,1
-SRR5871946,EU769558.1,3,86,2
-SRR5912645,EU769558.1,1,89,2
-SRR6033626,EU769558.1,1,100,1
-SRR6033628,EU769558.1,1,100,1
-SRR6033639,EU769558.1,1,100,1
-SRR644516,EU769558.1,1,93,1
-SRR6033645,EU769558.1,1,100,1
-SRR6255526,EU769558.1,1,100,1
-SRR6427316,EU769558.1,1,94,1
-SRR6321775,EU769558.1,1,100,1
-SRR6129050,EU769558.1,1,100,1
-SRR4841813,EU769558.1,1,100,1
-SRR6049394,EU769558.1,1,97,1
-SRR6374336,EU769558.1,1,97,1
-SRR6337229,EU769558.1,1,100,1
-SRR6397025,EU769558.1,1,97,1
-SRR621092,EU769558.1,1,100,1
-SRR5928938,EU769558.1,1,100,1
-SRR5928950,EU769558.1,1,100,1
-SRR5928971,EU769558.1,1,100,1
-SRR653810,EU769558.1,1,100,1
-SRR5928985,EU769558.1,1,100,3
-SRR5929512,EU769558.1,1,100,1
-SRR646662,EU769558.1,1,100,1
-SRR6845025,EU769558.1,2,98,3
-SRR6467014,EU769558.1,1,100,1
-SRR6467020,EU769558.1,1,100,2
-SRR6467048,EU769558.1,1,100,2
-SRR6467051,EU769558.1,1,100,1
-SRR7041629,EU769558.1,1,100,1
-SRR6811817,EU769558.1,1,100,1
-SRR7041660,EU769558.1,1,100,1
-SRR7041672,EU769558.1,1,100,1
-SRR5571009,EU769558.1,1,97,1
-SRR6971354,EU769558.1,1,96,1
-SRR6713694,EU769558.1,1,88,2
-SRR6911582,EU769558.1,1,100,1
-SRR6713886,EU769558.1,2,85,2
-SRR6713696,EU769558.1,3,84,4
-SRR7073597,EU769558.1,1,97,1
-SRR6713697,EU769558.1,2,82,2
-SRR6231668,EU769558.1,1,100,1
-SRR6829419,EU769558.1,1,96,1
-SRR7463313,EU769558.1,1,97,1
-SRR6904675,EU769558.1,1,96,1
-SRR7332235,EU769558.1,1,96,1
-SRR726307,EU769558.1,1,96,1
-SRR7464313,EU769558.1,1,100,2
-SRR7072012,EU769558.1,1,93,1
-SRR7249642,EU769558.1,1,100,1
-SRR726335,EU769558.1,1,93,1
-SRR7511601,EU769558.1,1,100,1
-SRR7548120,EU769558.1,1,100,1
-SRR7865390,EU769558.1,1,100,1
-SRR7763299,EU769558.1,2,83,1
-SRR7287594,EU769558.1,1,100,1
-SRR7443362,EU769558.1,1,100,1
-SRR7443375,EU769558.1,1,100,1
-SRR7443390,EU769558.1,1,100,1
-SRR7161661,EU769558.1,1,89,1
-SRR7993257,EU769558.1,1,100,1
-SRR7280981,EU769558.1,1,97,1
-SRR7993269,EU769558.1,1,100,1
-SRR8126386,EU769558.1,1,96,1
-SRR797552,EU769558.1,1,96,1
-SRR7993273,EU769558.1,1,100,1
-SRR7829572,EU769558.1,1,100,1
-SRR7993280,EU769558.1,1,100,3
-SRR797555,EU769558.1,1,96,1
-SRR8140936,EU769558.1,1,100,1
-SRR7496971,EU769558.1,1,97,1
-SRR7993311,EU769558.1,1,100,1
-SRR7993313,EU769558.1,1,100,1
-SRR7627049,EU769558.1,2,84,1
-SRR7993317,EU769558.1,1,100,2
-SRR7882657,EU769558.1,1,100,1
-SRR8138699,EU769558.1,1,100,1
-SRR8618358,EU769558.1,1,100,1
-SRR6713755,EU769558.1,2,84,2
-SRR8487546,EU769558.1,1,97,1
-SRR6713756,EU769558.1,3,85,4
-SRR786806,EU769558.1,1,93,1
-SRR867908,EU769558.1,1,100,1
-SRR8420107,EU769558.1,1,100,1
-SRR8667516,EU769558.1,1,100,1
-SRR8420141,EU769558.1,1,100,1
-SRR8420151,EU769558.1,1,100,1
-SRR8797527,EU769558.1,1,100,1
-SRR8452662,EU769558.1,1,100,2
-SRR8452663,EU769558.1,1,100,2
-SRR8452664,EU769558.1,1,100,1
-SRR8452670,EU769558.1,1,100,1
-SRR8420200,EU769558.1,1,100,1
-SRR8479341,EU769558.1,1,92,1
-SRR8420215,EU769558.1,1,100,1
-SRR8420220,EU769558.1,1,100,1
-SRR8166922,EU769558.1,1,100,1
-SRR8420253,EU769558.1,1,100,2
-SRR6713767,EU769558.1,2,83,4
-SRR9054133,EU769558.1,1,100,1
-SRR8420277,EU769558.1,1,100,2
-SRR8147025,EU769558.1,1,91,1
-SRR6713770,EU769558.1,4,83,8
-SRR8453005,EU769558.1,1,100,1
-SRR8147057,EU769558.1,1,100,2
-SRR9631731,EU769558.1,1,100,1
-SRR9117964,EU769558.1,1,100,1
-SRR6713772,EU769558.1,2,83,4
-SRR9117965,EU769558.1,1,100,1
-SRR9290858,EU769558.1,1,100,4
-SRR9051005,EU769558.1,1,100,1
-SRR9598531,EU769558.1,1,100,5
-SRR6713775,EU769558.1,2,83,4
-SRR9206607,EU769558.1,1,100,1
-SRR6713777,EU769558.1,1,89,2
-SRR8147113,EU769558.1,1,100,1
-SRR8147121,EU769558.1,1,100,1
-SRR9060044,EU769558.1,1,100,1
-SRR6713779,EU769558.1,2,85,2
-SRR9621890,EU769558.1,1,100,1
-SRR8960240,EU769558.1,1,95,1
-SRR9602710,EU769558.1,1,100,1
-SRR9643845,EU769558.1,3,84,2
-SRR9822617,EU769558.1,1,94,1
-SRR9595743,EU769558.1,1,100,5
-SRR9130143,EU769558.1,1,100,1
-SRR6713793,EU769558.1,1,89,1
-SRR8147236,EU769558.1,1,100,6
-SRR8147241,EU769558.1,1,100,1
-SRR9169232,EU769558.1,2,86,1
-SRR8147270,EU769558.1,1,100,1
-SRR9853613,EU769558.1,1,100,1
-SRR6713797,EU769558.1,3,86,3
-SRR8960359,EU769558.1,1,93,1
-SRR8147296,EU769558.1,1,100,1
-SRR8147300,EU769558.1,1,100,4
-SRR8147307,EU769558.1,1,100,1
-SRR8147323,EU769558.1,1,100,4
-SRR8147367,EU769558.1,1,100,1
-SRR8147370,EU769558.1,1,100,2
-SRR8147383,EU769558.1,1,100,1
-SRR8147429,EU769558.1,1,100,1
-SRR6713814,EU769558.1,2,86,2
-SRR8147438,EU769558.1,1,100,2
-SRR6713836,EU769558.1,2,86,4
-SRR8960913,EU769558.1,1,95,1
-SRR8960970,EU769558.1,1,97,1
+run_id,family_name,sequence_accession,coverage_bins,score,percent_identity,depth,n_reads,n_global_reads,length,virus_name
+ERR2756788,Coronaviridae,EU769558.1,aUAUmmm__________________,45,85,9.6,1694,399,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR3569488,Coronaviridae,EU769558.1,uomoamm__________________,41,85,4.3,408,91,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR3569452,Coronaviridae,EU769558.1,_ammamm__________________,40,85,4.8,471,101,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2756787,Coronaviridae,EU769558.1,_wmwuuw__________________,29,86,0.6,131,36,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447167,Coronaviridae,EU769558.1,____W_a__________________,10,93,0.0,482,482,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221784,Coronaviridae,EU769558.1,a________________________,8,79,0.0,17,16,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5295650,Coronaviridae,EU769558.1,.:__..___________________,7,84,0.1,6,5,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221771,Coronaviridae,EU769558.1,o________________________,6,85,0.0,34,31,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221770,Coronaviridae,EU769558.1,a________________________,6,85,0.0,18,16,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221776,Coronaviridae,EU769558.1,a________________________,6,87,0.0,17,13,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221774,Coronaviridae,EU769558.1,^________________________,5,93,0.0,30956,3178,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2756799,Coronaviridae,EU769558.1,__::.____________________,5,85,0.0,6,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR3569490,Coronaviridae,EU769558.1,__:__::__________________,5,85,0.0,6,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1106145,Coronaviridae,EU769558.1,____a____________________,4,100,0.0,19,19,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1106144,Coronaviridae,EU769558.1,____w____________________,4,100,0.0,13,13,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713770,Coronaviridae,EU769558.1,__u:_____________________,4,83,0.0,8,6,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713756,Coronaviridae,EU769558.1,__::_____________________,3,85,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221786,Coronaviridae,EU769558.1,u________________________,3,74,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713696,Coronaviridae,EU769558.1,__::_____________________,3,84,0.0,4,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2756798,Coronaviridae,EU769558.1,_:___.___________________,3,86,0.0,3,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713797,Coronaviridae,EU769558.1,___:__.__________________,3,86,0.0,3,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5871946,Coronaviridae,EU769558.1,____..___________________,3,86,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2756800,Coronaviridae,EU769558.1,_..______________________,3,83,0.0,2,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9643845,Coronaviridae,EU769558.1,_..______________________,3,84,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221789,Coronaviridae,EU769558.1,u________________________,2,79,0.0,7,7,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221775,Coronaviridae,EU769558.1,u________________________,2,80,0.0,5,5,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221791,Coronaviridae,EU769558.1,u________________________,2,79,0.0,5,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713772,Coronaviridae,EU769558.1,___u_____________________,2,83,0.0,4,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221801,Coronaviridae,EU769558.1,u________________________,2,81,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713767,Coronaviridae,EU769558.1,___u_____________________,2,83,0.0,4,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713775,Coronaviridae,EU769558.1,__u______________________,2,83,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713836,Coronaviridae,EU769558.1,__u______________________,2,86,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6845025,Coronaviridae,EU769558.1,___:.____________________,2,98,0.0,3,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713779,Coronaviridae,EU769558.1,__:______________________,2,85,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713814,Coronaviridae,EU769558.1,__:______________________,2,86,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221783,Coronaviridae,EU769558.1,:________________________,2,74,0.0,2,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221778,Coronaviridae,EU769558.1,:________________________,2,81,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR1301514,Coronaviridae,EU769558.1,_____:___________________,2,82,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713755,Coronaviridae,EU769558.1,__:______________________,2,84,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221790,Coronaviridae,EU769558.1,:________________________,2,84,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713697,Coronaviridae,EU769558.1,___:_____________________,2,82,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221777,Coronaviridae,EU769558.1,:________________________,2,80,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713886,Coronaviridae,EU769558.1,___:_____________________,2,85,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221798,Coronaviridae,EU769558.1,:________________________,2,81,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR059174,Coronaviridae,EU769558.1,__:______________________,2,87,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11085740,Coronaviridae,EU769558.1,____:____________________,2,87,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR1301942,Coronaviridae,EU769558.1,_:_______________________,2,78,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2592476,Coronaviridae,EU769558.1,____.____________________,2,86,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221935,Coronaviridae,EU769558.1,.________________________,2,78,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1760428,Coronaviridae,EU769558.1,.________________________,2,74,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+DRR050642,Coronaviridae,EU769558.1,_____.___________________,2,84,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9169232,Coronaviridae,EU769558.1,_____.___________________,2,86,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221796,Coronaviridae,EU769558.1,.________________________,2,75,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2587676,Coronaviridae,EU769558.1,____.____________________,2,83,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11939989,Coronaviridae,EU769558.1,____.____________________,2,86,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2064678,Coronaviridae,EU769558.1,__.______________________,2,85,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7763299,Coronaviridae,EU769558.1,__.______________________,2,83,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221795,Coronaviridae,EU769558.1,.________________________,2,77,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221779,Coronaviridae,EU769558.1,.________________________,2,84,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10587791,Coronaviridae,EU769558.1,__.______________________,2,82,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7627049,Coronaviridae,EU769558.1,_._______________________,2,84,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221794,Coronaviridae,EU769558.1,.________________________,2,77,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221772,Coronaviridae,EU769558.1,u________________________,1,91,0.0,7,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147236,Coronaviridae,EU769558.1,___u_____________________,1,100,0.0,6,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9595743,Coronaviridae,EU769558.1,______u__________________,1,100,0.0,5,5,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10868420,Coronaviridae,EU769558.1,_u_______________________,1,100,0.0,5,5,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR209483,Coronaviridae,EU769558.1,____u____________________,1,97,0.0,5,5,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR209339,Coronaviridae,EU769558.1,____u____________________,1,97,0.0,5,5,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9598531,Coronaviridae,EU769558.1,______u__________________,1,100,0.0,5,5,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447175,Coronaviridae,EU769558.1,____u____________________,1,95,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9290858,Coronaviridae,EU769558.1,___u_____________________,1,100,0.0,4,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10144986,Coronaviridae,EU769558.1,__u______________________,1,100,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147300,Coronaviridae,EU769558.1,___u_____________________,1,100,0.0,4,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147323,Coronaviridae,EU769558.1,___u_____________________,1,100,0.0,4,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5040897,Coronaviridae,EU769558.1,_u_______________________,1,92,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447166,Coronaviridae,EU769558.1,____u____________________,1,92,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1104916,Coronaviridae,EU769558.1,___u_____________________,1,92,0.0,4,4,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10894940,Coronaviridae,EU769558.1,:________________________,1,100,0.0,3,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5928985,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,3,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR321520,Coronaviridae,EU769558.1,____:____________________,1,96,0.0,3,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10221773,Coronaviridae,EU769558.1,:________________________,1,88,0.0,3,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1427110,Coronaviridae,EU769558.1,_:_______________________,1,97,0.0,3,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7993280,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,3,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2921200,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,3,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1870910,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,3,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447171,Coronaviridae,EU769558.1,____:____________________,1,94,0.0,3,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR209506,Coronaviridae,EU769558.1,____:____________________,1,97,0.0,3,3,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8420277,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8420253,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447169,Coronaviridae,EU769558.1,____:____________________,1,94,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447174,Coronaviridae,EU769558.1,____:____________________,1,94,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147057,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8452663,Coronaviridae,EU769558.1,_:_______________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10806519,Coronaviridae,EU769558.1,____:____________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8452662,Coronaviridae,EU769558.1,_:_______________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3290206,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1104917,Coronaviridae,EU769558.1,_:_______________________,1,97,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10131286,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR4050287,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3556130,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10131287,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713777,Coronaviridae,EU769558.1,__:______________________,1,89,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11393436,Coronaviridae,EU769558.1,_____:___________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3556109,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7993317,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR3586945,Coronaviridae,EU769558.1,:________________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1427108,Coronaviridae,EU769558.1,_:_______________________,1,97,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1364309,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512439,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11365058,Coronaviridae,EU769558.1,:________________________,1,98,0.0,2,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1313315,Coronaviridae,EU769558.1,_:_______________________,1,97,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10868424,Coronaviridae,EU769558.1,_:_______________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7464313,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5912645,Coronaviridae,EU769558.1,______:__________________,1,89,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+DRR207910,Coronaviridae,EU769558.1,_____:___________________,1,94,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR3179763,Coronaviridae,EU769558.1,____:____________________,1,88,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR059175,Coronaviridae,EU769558.1,__:______________________,1,91,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557305,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713694,Coronaviridae,EU769558.1,__:______________________,1,88,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11085733,Coronaviridae,EU769558.1,:________________________,1,97,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR057948,Coronaviridae,EU769558.1,______:__________________,1,96,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6467048,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6467020,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11038989,Coronaviridae,EU769558.1,______:__________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11235439,Coronaviridae,EU769558.1,______:__________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR1301566,Coronaviridae,EU769558.1,____:____________________,1,98,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147370,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR057913,Coronaviridae,EU769558.1,______:__________________,1,96,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10027201,Coronaviridae,EU769558.1,______:__________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512744,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147438,Coronaviridae,EU769558.1,___:_____________________,1,100,0.0,2,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR057900,Coronaviridae,EU769558.1,______:__________________,1,96,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11616456,Coronaviridae,EU769558.1,__:______________________,1,100,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447172,Coronaviridae,EU769558.1,____:____________________,1,94,0.0,2,2,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR4841813,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6049394,Coronaviridae,EU769558.1,_____.___________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6374336,Coronaviridae,EU769558.1,__.______________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6337229,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6397025,Coronaviridae,EU769558.1,_____.___________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR621092,Coronaviridae,EU769558.1,__.______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5928938,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5928950,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5928971,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR653810,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5929512,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR646662,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6467014,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6467051,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7041629,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6811817,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7041660,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7041672,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5571009,Coronaviridae,EU769558.1,___._____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6971354,Coronaviridae,EU769558.1,______.__________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6911582,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7073597,Coronaviridae,EU769558.1,__.______________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6231668,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6829419,Coronaviridae,EU769558.1,_._______________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7463313,Coronaviridae,EU769558.1,.________________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6904675,Coronaviridae,EU769558.1,_____.___________________,1,96,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7332235,Coronaviridae,EU769558.1,______.__________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR726307,Coronaviridae,EU769558.1,.________________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7072012,Coronaviridae,EU769558.1,_._______________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7249642,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR726335,Coronaviridae,EU769558.1,___._____________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7511601,Coronaviridae,EU769558.1,__.______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7548120,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7865390,Coronaviridae,EU769558.1,__.______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7287594,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7443362,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7443375,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7443390,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7161661,Coronaviridae,EU769558.1,_._______________________,1,89,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7993257,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7280981,Coronaviridae,EU769558.1,____.____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7993269,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8126386,Coronaviridae,EU769558.1,______.__________________,1,96,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR797552,Coronaviridae,EU769558.1,_____.___________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7993273,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7829572,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR797555,Coronaviridae,EU769558.1,____.____________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8140936,Coronaviridae,EU769558.1,____.____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7496971,Coronaviridae,EU769558.1,___._____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7993311,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7993313,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR7882657,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8138699,Coronaviridae,EU769558.1,____.____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8618358,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8487546,Coronaviridae,EU769558.1,____.____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR786806,Coronaviridae,EU769558.1,__.______________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR867908,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8420107,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8667516,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8420141,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8420151,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8797527,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8452664,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8452670,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8420200,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8479341,Coronaviridae,EU769558.1,___._____________________,1,92,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8420215,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8420220,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8166922,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9054133,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147025,Coronaviridae,EU769558.1,__.______________________,1,91,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8453005,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9631731,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9117964,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9117965,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9051005,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9206607,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147113,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147121,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9060044,Coronaviridae,EU769558.1,__.______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9621890,Coronaviridae,EU769558.1,__.______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8960240,Coronaviridae,EU769558.1,____.____________________,1,95,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9602710,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9822617,Coronaviridae,EU769558.1,.________________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9130143,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6713793,Coronaviridae,EU769558.1,__.______________________,1,89,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147241,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147270,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR9853613,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8960359,Coronaviridae,EU769558.1,____.____________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147296,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147307,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147367,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147383,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8147429,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8960913,Coronaviridae,EU769558.1,____.____________________,1,95,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+DRR207900,Coronaviridae,EU769558.1,_____.___________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR8960970,Coronaviridae,EU769558.1,____.____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+DRR031699,Coronaviridae,EU769558.1,_._______________________,1,88,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2402431,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR209344,Coronaviridae,EU769558.1,____.____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2860609,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2860611,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR2929113,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR321346,Coronaviridae,EU769558.1,____.____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR4008064,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR321497,Coronaviridae,EU769558.1,____.____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR1726731,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10131284,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10131285,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10144987,Coronaviridae,EU769558.1,__.______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10119511,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10606892,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1049520,Coronaviridae,EU769558.1,____.____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10894941,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10733855,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11235440,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11276881,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10916742,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10916753,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11124998,Coronaviridae,EU769558.1,____.____________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10208171,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR599050,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10605966,Coronaviridae,EU769558.1,____.____________________,1,89,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR10319961,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR035256,Coronaviridae,EU769558.1,_._______________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1565898,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11365056,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11614696,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11410021,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11587830,Coronaviridae,EU769558.1,____.____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11356437,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1427111,Coronaviridae,EU769558.1,_._______________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11393420,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11393427,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11393430,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11393446,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11393457,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11393467,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1870985,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512207,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1169952,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1169953,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2026321,Coronaviridae,EU769558.1,__.______________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1236078,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1926493,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1271057,Coronaviridae,EU769558.1,_._______________________,1,89,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1926587,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512395,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1919328,Coronaviridae,EU769558.1,___._____________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1282063,Coronaviridae,EU769558.1,__.______________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11939929,Coronaviridae,EU769558.1,__.______________________,1,88,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512509,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11772023,Coronaviridae,EU769558.1,__.______________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2096033,Coronaviridae,EU769558.1,___._____________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512570,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2096039,Coronaviridae,EU769558.1,___._____________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512576,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2096041,Coronaviridae,EU769558.1,___._____________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512603,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512606,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2158277,Coronaviridae,EU769558.1,___._____________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR306304,Coronaviridae,EU769558.1,____.____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR309218,Coronaviridae,EU769558.1,.________________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3095692,Coronaviridae,EU769558.1,______.__________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1925049,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2032320,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512807,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1925079,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1925109,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1925113,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1925114,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR11183698,Coronaviridae,EU769558.1,____.____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2096733,Coronaviridae,EU769558.1,____.____________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3389982,Coronaviridae,EU769558.1,___._____________________,1,95,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557284,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3100126,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+ERR599326,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512036,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557460,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557463,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557473,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557482,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1513091,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512101,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557579,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557622,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1557641,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1513178,Coronaviridae,EU769558.1,_____.___________________,1,96,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1512196,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1298789,Coronaviridae,EU769558.1,_____.___________________,1,89,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3356526,Coronaviridae,EU769558.1,_____.___________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3363046,Coronaviridae,EU769558.1,____.____________________,1,89,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3985674,Coronaviridae,EU769558.1,.________________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR387891,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR1926462,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR4343442,Coronaviridae,EU769558.1,___._____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR4343444,Coronaviridae,EU769558.1,___._____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR2079648,Coronaviridae,EU769558.1,.________________________,1,88,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3620334,Coronaviridae,EU769558.1,___._____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3194395,Coronaviridae,EU769558.1,______.__________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3556100,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3556128,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR445811,Coronaviridae,EU769558.1,__.______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR4050279,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR4247347,Coronaviridae,EU769558.1,__.______________________,1,96,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3290207,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3556183,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR488276,Coronaviridae,EU769558.1,_____.___________________,1,93,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5084467,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447173,Coronaviridae,EU769558.1,____.____________________,1,95,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5447178,Coronaviridae,EU769558.1,____.____________________,1,92,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3336944,Coronaviridae,EU769558.1,_____.___________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR522055,Coronaviridae,EU769558.1,__.______________________,1,96,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5309724,Coronaviridae,EU769558.1,____.____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR3984662,Coronaviridae,EU769558.1,.________________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5812819,Coronaviridae,EU769558.1,_._______________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5572304,Coronaviridae,EU769558.1,___._____________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5572313,Coronaviridae,EU769558.1,___._____________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5988127,Coronaviridae,EU769558.1,_____.___________________,1,96,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6029052,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR5749584,Coronaviridae,EU769558.1,___._____________________,1,97,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6033626,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6033628,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6033639,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR644516,Coronaviridae,EU769558.1,__.______________________,1,93,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6033645,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6255526,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6427316,Coronaviridae,EU769558.1,___._____________________,1,94,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6321775,Coronaviridae,EU769558.1,___._____________________,1,100,0.0,1,0,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"
+SRR6129050,Coronaviridae,EU769558.1,____.____________________,1,100,0.0,1,1,14335,"Bat coronavirus Trinidad/1CO7BA/2007 nonstructural protein 1b` gene, partial cds"

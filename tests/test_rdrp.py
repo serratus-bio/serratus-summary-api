@@ -21,11 +21,17 @@ def test_run_summary():
     with pytest.raises(Exception):
         get_response_json("/matches/rdrp/run/paged?run=ERR2756788&familyName=Tombusviridae&familyId=Tombusviridae-14&scoreMin=20")
 
-
-def test_download_phylum():
-    contents = get_response_data("/matches/rdrp/download?phylum=Pisuviricota&scoreMin=100")
+def test_matches_download_phylum():
+    contents = get_response_data("/matches/rdrp/download?phylum=Pisuviricota&scoreMin=100&columns=run_id")
     with open('tests/files/SerratusMatches-rdrp-phylum-Pisuviricota.csv') as f:
         assert contents == f.read()
+
+
+def test_matches_phylum():
+    result = get_response_json("/matches/rdrp?phylum=Pisuviricota&scoreMin=100&columns=run_id")
+    assert result[0] == {
+        'run_id': 'ERR10058527',
+    }
 
 
 def test_download_sequence():
