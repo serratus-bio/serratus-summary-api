@@ -41,15 +41,36 @@ def test_download_sequence():
 def test_paginate_phylum():
     pagination = get_response_json("/matches/rdrp/paged?phylum=Pisuviricota&scoreMin=100")
     assert len(pagination['result']) == 20
-    assert pagination['result'][0] == {'run_id': 'SRR5633706', 'phylum_name': 'Pisuviricota', 'coverage_bins': '^^^^^^^^^^^^^^^^^^^^^^^^^', 'score': 100, 'percent_identity': 98, 'depth': 64096.8, 'n_reads': 998569, 'aligned_length': 32}
-    assert pagination['total'] == 65352
+    assert pagination['result'][0] == {
+        'run_id': 'ERR10058527',
+        'phylum_name': 'Pisuviricota',
+        'coverage_bins': '^^a^MwM^mU^^a^OA^^^^^W^^^',
+        'score': 100,
+        'percent_identity': 99,
+        'depth': 97018.1,
+        'n_reads': 999982,
+        'aligned_length': 49
+    }
+    assert pagination['total'] == 112848
 
 
 def test_paginate_family():
     pagination = get_response_json("/matches/rdrp/paged?family=Coronaviridae&scoreMin=100")
     assert len(pagination['result']) == 20
-    assert pagination['result'][0] == {'run_id': 'SRR12348234', 'phylum_name': 'Pisuviricota', 'family_name': 'Coronaviridae', 'family_group': 'Coronaviridae-1', 'family_id': 'Coronaviridae-1', 'coverage_bins': 'MMOAM^AOM^^^^^^^^^^^^^^mw', 'score': 100, 'percent_identity': 99, 'depth': 94113.8, 'n_reads': 996256, 'aligned_length': 47}
-    assert pagination['total'] == 5310
+    assert pagination['result'][0] == {
+        'run_id': 'ERR10058527',
+        'phylum_name': 'Pisuviricota',
+        'family_name': 'Coronaviridae',
+        'family_group': 'Coronaviridae-1',
+        'family_id': 'Coronaviridae-1',
+        'coverage_bins': '^^a^MwM^mU^^a^OA^^^^^W^^^',
+        'score': 100,
+        'percent_identity': 99,
+        'depth': 97018.1,
+        'n_reads': 999982,
+        'aligned_length': 49
+    }
+    assert pagination['total'] == 10948
 
 
 def test_paginate_family_unique():
@@ -63,8 +84,22 @@ def test_paginate_family_unique():
 def test_paginate_sequence():
     data = get_response_json("/matches/rdrp/paged?sequence=NC_001653&scoreMax=50")
     assert len(data['result']) == 20
-    assert data['result'][0] == {'run_id': 'SRR1595854', 'phylum_name': 'Deltavirus', 'family_name': 'Deltavirus', 'family_group': 'Deltavirus-1', 'family_id': 'Deltavirus-1', 'virus_name': 'hdv1', 'sequence_accession': 'NC_001653', 'coverage_bins': '_momauuu_woou_________ao_', 'score': 49, 'percent_identity': 81, 'depth': 27.4, 'n_reads': 447, 'aligned_length': 31}
-    assert data['total'] == 166
+    assert data['result'][0] == {
+        'run_id': 'ERR5869706',
+        'phylum_name': 'Deltavirus',
+        'family_name': 'Deltavirus',
+        'family_group': 'Deltavirus-1',
+        'family_id': 'Deltavirus-1',
+        'virus_name': 'hdv1',
+        'sequence_accession': 'NC_001653',
+        'coverage_bins': '_.:__.___u.:.:aoo:aomomo_',
+        'score': 49,
+        'percent_identity': 91,
+        'depth': 39.8,
+        'n_reads': 470,
+        'aligned_length': 42
+    }
+    assert data['total'] == 274
 
 
 def test_counts():
