@@ -24,6 +24,8 @@ import route.rdrp
 import route.sra
 import route.palmprint
 import route.geo
+import route.host
+import route.misc
 
 @app.errorhandler(Exception)
 def server_error(e):
