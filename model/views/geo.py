@@ -10,3 +10,4 @@ class srarun_geo_coordinates(db.Model):
     coordinate_x = db.Column(db.Float)
     coordinate_y = db.Column(db.Float)
     from_text = db.Column(db.Text)
+
