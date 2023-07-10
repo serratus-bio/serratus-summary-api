@@ -14,8 +14,8 @@ def test_paginate_geo():
         ['coordinate_y', float],
         ['from_text', str]
     ]:
-      assert key in first_page['result']
-      assert isinstance(first_page['result'][key], type)
+      assert key in first_page['result'][0]
+      assert isinstance(first_page['result'][0][key], type)
 
     second_page = get_response_json("/geo/rdrp/paged?page=2&perPage=5")
     
