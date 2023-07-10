@@ -3,23 +3,19 @@ from . import  get_response_json
 def test_paginate_geo():
     first_page = get_response_json("/geo/rdrp/paged?page=1&perPage=10")
     assert len(first_page['result']) == 10
-    
-    assert 'run_id' in first_page['result'][0]
-    assert isinstance(first_page['result'][0]['run_id'], str)
-    assert 'biosample_id' in first_page['result'][0]
-    assert isinstance(first_page['result'][0]['biosample_id'], str)
-    assert 'release_date' in first_page['result'][0]
-    assert isinstance(first_page['result'][0]['release_date'], str)
-    assert 'tax_id' in first_page['result'][0]
-    assert isinstance(first_page['result'][0]['tax_id'], str)
-    assert 'scientific_name' in first_page['result'][0]
-    assert isinstance(first_page['result'][0]['scientific_name'], str)
-    assert 'coordinate_x' in first_page['result'][0]
-    assert isinstance(first_page['result'][0]['coordinate_x'], float)
-    assert 'coordinate_y' in first_page['result'][0]
-    assert isinstance(first_page['result'][0]['coordinate_y'], float)
-    assert 'from_text' in first_page['result'][0]
-    assert isinstance(first_page['result'][0]['from_text'], str)
+
+    for [key, type] in [
+        ['run_id', str]
+        ['biosample_id', str]
+        ['release_date', str]
+        ['tax_id', str]
+        ['scientific_name', str]
+        ['coordinate_x', float]
+        ['coordinate_y', float]
+        ['from_text', str]
+    ]:
+      assert key in first_page['result']
+      assert isinstance(first_page['result'][key], type)
 
     second_page = get_response_json("/geo/rdrp/paged?page=2&perPage=5")
     
