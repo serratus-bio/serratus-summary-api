@@ -109,8 +109,6 @@ def get_data():
             .with_entities(*list_attributes_of_model(view))
     )
     
-    # .where(view.run_id.in_(['asdas']))
-
     # where
     if(isinstance(json['run_id'], list)):
         query = (
