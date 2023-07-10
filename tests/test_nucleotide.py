@@ -19,7 +19,7 @@ def test_run_summary():
       assert key in first_page['result'][0]
       assert isinstance(first_page['result'][0][key], type)
     
-    second_page = get_response_json("/matches/nucleotide/run/paged?run=ERR2756788&page=2perPage=5")
+    second_page = get_response_json("/matches/nucleotide/run/paged?run=ERR2756788&page=2&perPage=5")
     
     assert first_page['result'][5] == second_page['result'][0]
     assert first_page['result'][6] == second_page['result'][1]
