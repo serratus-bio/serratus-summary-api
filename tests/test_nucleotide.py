@@ -6,15 +6,15 @@ def test_run_summary():
 
     for [key, type] in [
         ['coverage_bins', str],
-        ['depth', str],
+        ['depth', float],
         ['family_id', str],
         ['family_name', str],
-        ['length', str],
-        ['n_global_reads', str],
-        ['n_reads', str],
-        ['percent_identity', str],
+        ['length', float],
+        ['n_global_reads', float],
+        ['n_reads', float],
+        ['percent_identity', float],
         ['run_id', str],
-        ['score', str]
+        ['score', float]
     ]:
       assert key in first_page['result'][0]
       assert isinstance(first_page['result'][0][key], type)
