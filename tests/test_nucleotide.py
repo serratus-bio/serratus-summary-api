@@ -9,12 +9,12 @@ def test_run_summary():
         ['depth', float],
         ['family_id', str],
         ['family_name', str],
-        ['length', float],
-        ['n_global_reads', float],
-        ['n_reads', float],
-        ['percent_identity', float],
+        ['length', int],
+        ['n_global_reads', int],
+        ['n_reads', int],
+        ['percent_identity', int],
         ['run_id', str],
-        ['score', float]
+        ['score', int]
     ]:
       assert key in first_page['result'][0]
       assert isinstance(first_page['result'][0][key], type)
