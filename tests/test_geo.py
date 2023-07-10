@@ -5,13 +5,13 @@ def test_paginate_geo():
     assert len(first_page['result']) == 10
 
     for [key, type] in [
-        ['run_id', str]
-        ['biosample_id', str]
-        ['release_date', str]
-        ['tax_id', str]
-        ['scientific_name', str]
-        ['coordinate_x', float]
-        ['coordinate_y', float]
+        ['run_id', str],
+        ['biosample_id', str],
+        ['release_date', str],
+        ['tax_id', str],
+        ['scientific_name', str],
+        ['coordinate_x', float],
+        ['coordinate_y', float],
         ['from_text', str]
     ]:
       assert key in first_page['result']
