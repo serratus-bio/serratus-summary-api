@@ -19,6 +19,7 @@ application = app  # for AWS EB
 cors = CORS(app, resources={r"*": {"origins": "*"}})
 cache = Cache(app)
 
+import route.data
 import route.nucleotide
 import route.rdrp
 import route.sra
