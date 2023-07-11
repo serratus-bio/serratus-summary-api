@@ -72,7 +72,7 @@ def test_paginate_family():
     assert first_page['result'][9] == second_page['result'][4]
 
 def test_paginate_sequence():
-    first_page = get_response_json("/matches/nucleotide/paged?sequence=EU769558.1&scoreMax=50&page=2&perPage=10")
+    first_page = get_response_json("/matches/nucleotide/paged?sequence=EU769558.1&scoreMax=50&perPage=10")
     assert len(first_page['result']) == 10
 
     for [key, type] in [
@@ -92,9 +92,9 @@ def test_paginate_sequence():
       assert key in first_page['result'][0]
       assert isinstance(first_page['result'][0][key], type)
     
-    second_page = get_response_json("/matches/nucleotide/paged?sequence=EU769558.1&scoreMax=50&perPage=5")
+    second_page = get_response_json("/matches/nucleotide/paged?sequence=EU769558.1&scoreMax=50&page=2&perPage=5")
     assert len(second_page['result']) == 5
-    
+
     assert first_page['result'][5] == second_page['result'][0]
     assert first_page['result'][6] == second_page['result'][1]
     assert first_page['result'][7] == second_page['result'][2]
