@@ -18,6 +18,7 @@ def test_paginate_geo():
       assert isinstance(first_page['result'][0][key], type)
 
     second_page = get_response_json("/geo/rdrp/paged?page=2&perPage=5")
+    assert len(second_page['result']) == 5
     
     assert first_page['result'][5] == second_page['result'][0]
     assert first_page['result'][6] == second_page['result'][1]
