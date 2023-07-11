@@ -5,7 +5,6 @@ from flask_caching import Cache
 from werkzeug.exceptions import HTTPException
 from sqlalchemy.exc import DatabaseError
 
-
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('config.py')
