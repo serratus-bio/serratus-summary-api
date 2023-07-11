@@ -7,7 +7,7 @@ def test_list():
         ['assembly_node', int],
         ['cigar', str],
         ['coverage', float],
-        ['evalue': float],
+        ['evalue', float],
         ['palm_id', str],
         ['percent_identity', int],
         ['pp_end', int],
