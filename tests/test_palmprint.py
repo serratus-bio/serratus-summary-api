@@ -9,7 +9,7 @@ def test_list():
         ['coverage', float],
         ['evalue', float],
         ['palm_id', str],
-        ['percent_identity', int],
+        ['percent_identity', float],
         ['pp_end', int],
         ['pp_start', int],
         ['q_end', int],

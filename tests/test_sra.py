@@ -14,5 +14,5 @@ def test_analysis_index_route():
         ['run_id', str],
         ['srarun', bool]
     ]:
-      assert key in result[0]
-      assert isinstance(result[0][key], type)
+      assert key in result
+      assert isinstance(result[key], type)
