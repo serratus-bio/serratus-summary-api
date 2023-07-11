@@ -144,8 +144,8 @@ def test_counts():
         ['percent_identity', int],
         ['score', int]
     ]:
-      assert key in result['result'][0]
-      assert isinstance(result['result'][0][key], type)
+      assert key in result[0]
+      assert isinstance(result[0][key], type)
 
     result = get_response_json("/counts/rdrp?sequence=NC_001653")
 
@@ -154,8 +154,8 @@ def test_counts():
         ['percent_identity', int],
         ['score', int]
     ]:
-      assert key in result['result'][0]
-      assert isinstance(result['result'][0][key], type)
+      assert key in result[0]
+      assert isinstance(result[0][key], type)
 
 # def test_list():
 #     values_list = get_response_json("/list/rdrp/family")

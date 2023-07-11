@@ -21,5 +21,5 @@ def test_list():
         ['row_id', int],
         ['run_id', str]
     ]:
-      assert key in result['result'][0]
-      assert isinstance(result['result'][0][key], type)
+      assert key in result[0]
+      assert isinstance(result[0][key], type)

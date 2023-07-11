@@ -109,8 +109,8 @@ def test_counts():
         ['percent_identity', int],
         ['score', int]
     ]:
-      assert key in result['result'][0]
-      assert isinstance(result['result'][0][key], type)
+      assert key in result[0]
+      assert isinstance(result[0][key], type)
 
 # def test_list():
 #     values_list = get_response_json("/list/nucleotide/family")
