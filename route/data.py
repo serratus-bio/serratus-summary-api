@@ -96,7 +96,7 @@ def get_data():
     else:
         return jsonify(error='Invalid parameter in JSON payload: view \'' + view + '\' not found'), 400
     
-    # DEFAULT PARAMETERS
+    # DEFAULT REQUEST PARAMETERS
     if('run_id' not in json):
         json['run_id'] = None
     
@@ -109,7 +109,7 @@ def get_data():
             .with_entities(*list_attributes_of_model(view))
     )
     
-    # where
+    # .where
     if(isinstance(json['run_id'], list)):
         query = (
             query
@@ -122,4 +122,4 @@ def get_data():
             .all()
     )
 
-    return jsonify(result=[row._asdict() for row in query]), 200
+    return jsonify(data=[row._asdict() for row in query]), 200
