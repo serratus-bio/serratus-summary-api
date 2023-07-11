@@ -70,23 +70,34 @@ def test_paginate_phylum():
     assert first_page['result'][9] == second_page['result'][4]
 
 
-# def test_paginate_family():
-#     pagination = get_response_json("/matches/rdrp/paged?family=Coronaviridae&scoreMin=100")
-#     assert len(pagination['result']) == 20
-#     assert pagination['result'][0] == {
-#         'run_id': 'ERR10058527',
-#         'phylum_name': 'Pisuviricota',
-#         'family_name': 'Coronaviridae',
-#         'family_group': 'Coronaviridae-1',
-#         'family_id': 'Coronaviridae-1',
-#         'coverage_bins': '^^a^MwM^mU^^a^OA^^^^^W^^^',
-#         'score': 100,
-#         'percent_identity': 99,
-#         'depth': 97018.1,
-#         'n_reads': 999982,
-#         'aligned_length': 49
-#     }
-#     assert pagination['total'] == 10948
+def test_paginate_family():
+    first_page = get_response_json("/matches/rdrp/paged?family=Coronaviridae&scoreMin=100&perPage=10")
+    assert len(first_page['result']) == 10
+
+    for [key, type] in [
+        ['aligned_length', int],
+        ['coverage_bins', str],
+        ['depth', float],
+        ['family_group', str],
+        ['family_id', str],
+        ['family_name', str],
+        ['n_reads', int],
+        ['percent_identity', int],
+        ['phylum_name', str],
+        ['run_id', str],
+        ['score', int]
+    ]:
+      assert key in first_page['result'][0]
+      assert isinstance(first_page['result'][0][key], type)
+    
+    second_page = get_response_json("/matches/rdrp/paged?family=Coronaviridae&scoreMin=100&page=2&perPage=5")
+    assert len(second_page['result']) == 5
+    
+    assert first_page['result'][5] == second_page['result'][0]
+    assert first_page['result'][6] == second_page['result'][1]
+    assert first_page['result'][7] == second_page['result'][2]
+    assert first_page['result'][8] == second_page['result'][3]
+    assert first_page['result'][9] == second_page['result'][4]
 
 
 # def test_paginate_family_unique():
