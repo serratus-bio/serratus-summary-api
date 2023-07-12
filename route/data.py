@@ -1,7 +1,7 @@
 from flask import current_app, jsonify, request
 from flask_caching import Cache
 from flask_httpauth import HTTPBasicAuth
-from sqlalchemy import create_engine, select
+from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, attributes, sessionmaker
 
 import time
@@ -60,21 +60,31 @@ def verify_password(username, password):
 
 
 # MODELS
-from model.data import rfamily
-from model.data import rphylum
-from model.data import rsequence
+from model.data import model_from_table
 
 model_dict = {
-    'rfamily': rfamily,
-    'rphylum': rphylum,
-    'rsequence': rsequence
+    'rfamily': model_from_table(name='rfamily', primary_keys=('run_id')),
+    'rphylum': model_from_table(name='rphylum', primary_keys=('run_id')),
+    'rsequence': model_from_table(name='rsequence', primary_keys=('run_id'))
 }
+
 
 # FUNCTIONS
 def list_attributes_of_model(model):
     return list(filter(lambda x: isinstance(x, attributes.InstrumentedAttribute), model.__dict__.values()))
 
 def data_query(arguments):
+    # DEFAULT ARGUMENTS
+    if('limit' not in arguments):
+        arguments['limit'] = 8
+    if('offset' not in arguments):
+        arguments['offset'] = 0
+    
+    if('run_id' not in arguments):
+        arguments['run_id'] = None
+    if(isinstance(arguments['run_id'], str)):
+        arguments['run_id'] = [arguments['run_id']]
+    
     data_query = (
         SQLAlchemySession
             .query(arguments['view'])
@@ -90,7 +100,8 @@ def data_query(arguments):
 
     return (
         data_query
-            .limit(8)
+            .offset(arguments['offset'])
+            .limit(arguments['limit'])
             .all()
     )
 
@@ -119,12 +130,9 @@ def GET_data_view(view):
     else:
         return jsonify(error='Invalid parameter in URL: view \'' + view + '\' not found'), 400
     
-    # DEFAULT REQUEST PARAMETERS
-    if('run_id' not in request.args):
-        request.args['run_id'] = None
-    
-    if(isinstance(request.args['run_id'], str)):
-        request.args['run_id'] = [request.args['run_id']]
+    for key, value in request.args.items():
+        if(isinstance(value, str) and ',' in value):
+            request.args[key] = value.split(',')
     
     if(cache.get(request.full_path) == None):
         _data_query = data_query({ 'view':view } | request.args)
@@ -157,13 +165,6 @@ def POST_data_view(view):
         view = model_dict[view]
     else:
         return jsonify(error='Invalid parameter in URL: view \'' + view + '\' not found'), 400
-    
-    # DEFAULT REQUEST PARAMETERS
-    if('run_id' not in json):
-        json['run_id'] = None
-    
-    if(isinstance(json['run_id'], str)):
-        json['run_id'] = [json['run_id']]
     
     _data_query = data_query({ 'view':view } | json)
 
