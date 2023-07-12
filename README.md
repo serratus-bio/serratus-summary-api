@@ -104,3 +104,82 @@ See https://github.com/ababaian/serratus/wiki/Serratus-SQL-Database-Management
 - handle timeouts e.g.
     > DatabaseError: current transaction is aborted, commands ignored until end of transaction block
 - investigate `CACHE_TYPE = 'filesystem'` and `CACHE_THRESHOLD`
+
+## (Beta) Data API
+
+The Data API is meant to be a general purpose interface for accesing the data in the serratus db. It is a thin REST layer on top of the db that lets you access any of its tables (as one would do with SQL) in a uniform and predictable way.
+
+The Data API resides on the `/data` endpoint. Each table is mapped to path in this endpoint like `/data/<table>`.
+
+### POST Request
+
+The primary way to request data from the Data API is through a POST request to any `/data/<table>` path with a JSON payload that may contain some of the following keys:
+
+- **offset**: retrieves rows from the specified offset, defaults to **0**
+- **limit**: number of rows to retrieve, defaults to **8**
+
+- **<column_name>**: if a column is a primary key, one could pass (a single or) a list of values to limit the query to a subset of matches, if they exist. In code, this adds a `WHERE <column_name> in (values)` clause to the query.
+
+### GET Request
+
+GET requests to any `/data/<table>` path get resolved by translating them to a corresponding POST request, as follows:
+
+- The path remains the same.
+- Any URL parameters in the GET request are sent as part of the JSON payload of the POST request. Example: `?param_one=one&param_two=two&param_three=three` will send a `{"param_one":"one","param_two":"two","param_three":"three"}` payload.
+- All parameters are mapped as string values and no further syntactic transformations are considered at the moment.
+
+GET requests are meant for trivial queries to the db and one big difference against POST requests is that all of them are cached for (at least) a day.
+
+### Authentication
+
+The Data API uses [HTTP Basic authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication).
+
+The credentials are `serratus:serratus`.
+
+This doesn't do much at the moment but is it in place in case we need some sort of access/rate control in the future, ... also to make sure that you read this small guide before using the API.
+
+### Examples
+
+Sample POST request to get data of two `run_ids`s from the `rfamily` table:
+
+```sh
+curl -H 'Content-Type: application/json' -X POST -d '{"limit":8,"offset":0,"run_id":["DRR000614","DRR001252"]}' -u 'serratus:serratus' https://api.serratus.io/data/rfamily
+```
+
+Same query using a GET request and default field values:
+
+```sh
+curl -u 'serratus:serratus' https://api.serratus.io/data/rfamily?run_id=DRR000614,DRR001252
+```
+
+Sample response:
+
+```sh
+{
+  "data": [
+    {
+      "run_id": "DRR000614",
+      "phylum_name": "Kitrinoviricota",
+      "family_name": "Alphaflexiviridae",
+      "family_group": "Alphaflexiviridae-1",
+      "coverage_bins": "___________________:_____",
+      "score": 1,
+      "percent_identity": 73,
+      "depth": 0.1,
+      "n_reads": 2,
+      "aligned_length": 22
+    },
+    ... x 10 times
+  ]
+}
+```
+
+Errors look like:
+
+```sh
+{
+  "error": "<some error message>"
+}
+```
+
+For examples on how to make HTTP requests in your favorite framework/language, take a look at [this site](https://www.google.com).
