@@ -84,7 +84,6 @@ def data_query(arguments):
         arguments['run_id'] = None
     if(isinstance(arguments['run_id'], str)):
         arguments['run_id'] = [arguments['run_id']]
-    
     data_query = (
         SQLAlchemySession
             .query(arguments['view'])
