@@ -135,7 +135,7 @@ def GET_data_view(view):
             request.args[key] = value.split(',')
     
     if(cache.get(request.full_path) == None):
-        _data_query = data_query({ 'view':view } | request.args)
+        _data_query = data_query({ **{ 'view':view }, **request.args })
 
         cache.set(request.full_path, _data_query)
     else:
@@ -166,6 +166,6 @@ def POST_data_view(view):
     else:
         return jsonify(error='Invalid parameter in URL: view \'' + view + '\' not found'), 400
     
-    _data_query = data_query({ 'view':view } | json)
+    _data_query = data_query({ **{ 'view':view }, **json })
 
     return jsonify(data=[row._asdict() for row in _data_query]), 200
