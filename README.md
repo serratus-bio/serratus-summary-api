@@ -118,7 +118,7 @@ The primary way to request data from the Data API is through a POST request to a
 - **offset**: retrieves rows from the specified offset, defaults to **0**
 - **limit**: number of rows to retrieve, defaults to **8**
 
-- <column_name>: if a column is a primary key, one could pass (a single or) a list of values to limit the query to a subset of matches, if they exists. In code, this adds a `WHERE <column_name> in (values)` clause to the query.
+- **<column_name>**: if a column is a primary key, one could pass (a single or) a list of values to limit the query to a subset of matches, if they exist. In code, this adds a `WHERE <column_name> in (values)` clause to the query.
 
 ### GET Request
 
@@ -143,13 +143,13 @@ This doesn't do much at the moment but is it in place in case we need some sort 
 Sample POST request to get data of two `run_ids`s from the `rfamily` table:
 
 ```sh
-curl -H 'Content-Type: application/json' -X POST -d '{"limit":10,"offset":0,"run_id":["DRR000614","DRR001252"]}' -u 'serratus:serratus' https://api.serratus.io/data/rfamily
+curl -H 'Content-Type: application/json' -X POST -d '{"limit":8,"offset":0,"run_id":["DRR000614","DRR001252"]}' -u 'serratus:serratus' https://api.serratus.io/data/rfamily
 ```
 
-Same query using a GET request:
+Same query using a GET request and default field values:
 
 ```sh
-curl -u 'serratus:serratus' 'https://api.serratus.io/data/rfamily?limit=10&offset=0&run_id=DRR000614,DRR001252'
+curl -u 'serratus:serratus' 'https://api.serratus.io/data/rfamily?run_id=DRR000614,DRR001252'
 ```
 
 Sample response:
@@ -182,4 +182,4 @@ Errors look like:
 }
 ```
 
-For examples on how to make HTTP requests in your favorite language/framework, take a look at [this site](https://www.google.com).
+For examples on how to make HTTP requests in your favorite framework/language, take a look at [this site](https://www.google.com).
