@@ -136,7 +136,7 @@ The Data API uses [HTTP Basic authentication](https://developer.mozilla.org/en-U
 
 The credentials are `serratus:serratus`.
 
-This doesn't do much at the moment but is it in place in case we need some sort of access/rate control in the future. ... also to make sure that you read this small guide before using the API.
+This doesn't do much at the moment but is it in place in case we need some sort of access/rate control in the future, ... also to make sure that you read this small guide before using the API.
 
 ### Examples
 
@@ -149,7 +149,7 @@ curl -H 'Content-Type: application/json' -X POST -d '{"limit":8,"offset":0,"run_
 Same query using a GET request and default field values:
 
 ```sh
-curl -u 'serratus:serratus' 'https://api.serratus.io/data/rfamily?run_id=DRR000614,DRR001252'
+curl -u 'serratus:serratus' https://api.serratus.io/data/rfamily?run_id=DRR000614,DRR001252
 ```
 
 Sample response:
