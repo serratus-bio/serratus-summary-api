@@ -8,7 +8,7 @@ Base = declarative_base()
 
 type_to_sqlalchemy_type = {
     'bigint':BigInteger,
-    # no Double in SQLAlchemy v1.4
+    # no Double in SQLAlchemy v1.4 :|
     'double precision':Float,
     'text':Text
 }
@@ -29,4 +29,4 @@ def model_from_table(name, __tablename__=None, primary_keys=None):
     sqlalchemy_columns = { key:type_to_sqlalchemy_type[value] if value in type_to_sqlalchemy_type else None for key, value in columns }
     sqlalchemy_columns = { key:Column(value, primary_key=primary_keys is not None and key in primary_keys) for key, value in sqlalchemy_columns.items() if value is not None }
 
-    return type(name, (Base,), { **{ '__tablename__':__tablename__ }, **sqlalchemy_columns });
+    return type(name, (Base,), { **{ '__columns__':dict(columns), '__tablename__':__tablename__ }, **sqlalchemy_columns })
