@@ -46,7 +46,7 @@ import time
 
 
 # INIT
-SQLAlchemyEngine = create_engine(current_app.config['SQLALCHEMY_DATABASE_URI'], echo=False)
+SQLAlchemyEngine = create_engine(current_app.config['SQLALCHEMY_DATABASE_URI'], echo=True)
 SQLAlchemySession = sessionmaker(bind=SQLAlchemyEngine)()
 auth = HTTPBasicAuth()
 cache = Cache(current_app)
@@ -75,15 +75,10 @@ def list_attributes_of_model(model):
 
 def data_query(arguments):
     # DEFAULT ARGUMENTS
-    if('limit' not in arguments):
-        arguments['limit'] = 8
-    if('offset' not in arguments):
-        arguments['offset'] = 0
-    
-    if('run_id' not in arguments):
-        arguments['run_id'] = None
-    if(isinstance(arguments['run_id'], str)):
-        arguments['run_id'] = [arguments['run_id']]
+    if('_limit' not in arguments):
+        arguments['_limit'] = 8
+    if('_offset' not in arguments):
+        arguments['_offset'] = 0
 
     data_query = (
         SQLAlchemySession
@@ -92,16 +87,30 @@ def data_query(arguments):
     )
     
     # .where
-    if(isinstance(arguments['run_id'], list)):
-        data_query = (
-            data_query
-                .where(arguments['view'].run_id.in_(arguments['run_id']))
-        )
+    for key in arguments['view'].__columns__:
+        _key = str(key).split('.').pop();
+
+        if(_key in arguments):
+            if(not isinstance(arguments[_key], list)):
+                arguments[_key] = [arguments[_key]]
+            
+            if(hasattr(arguments['view'], _key)):
+                if(arguments['view'].__columns__[_key] in ['bigint', 'double precision']):
+                    if(len(arguments[_key]) == 2):
+                        if(not arguments[_key][0] == ''):
+                            data_query = data_query.where(getattr(arguments['view'], _key) >= arguments[_key][0])
+                        if(not arguments[_key][1] == ''):
+                            data_query = data_query.where(getattr(arguments['view'], _key) <= arguments[_key][1])
+                    else:
+                        data_query = data_query.where(getattr(arguments['view'], _key).in_(arguments[_key]))
+
+                if(arguments['view'].__columns__[_key] in ['text']):
+                    data_query = data_query.where(getattr(arguments['view'], _key).in_(arguments[_key]))
 
     return (
         data_query
-            .offset(arguments['offset'])
-            .limit(arguments['limit'])
+            .offset(arguments['_offset'])
+            .limit(arguments['_limit'])
             .all()
     )
 

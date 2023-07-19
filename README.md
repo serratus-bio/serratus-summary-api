@@ -115,10 +115,20 @@ The Data API resides on the `/data` endpoint. Each table is mapped to path in th
 
 The primary way to request data from the Data API is through a POST request to any `/data/<table>` path with a JSON payload that may contain some of the following keys:
 
-- **offset**: retrieves rows from the specified offset, defaults to **0**
-- **limit**: number of rows to retrieve, defaults to **8**
+- **_limit**: number of rows to retrieve, defaults to **8**
+- **_offset**: retrieves rows from the specified offset, defaults to **0**
 
-- **<column_name>**: if a column is a primary key, one could pass (a single or) a list of values to limit the query to a subset of matches, if they exist. In code, this adds a `WHERE <column_name> in (values)` clause to the query.
+- **<column_name>**: if a key is a column name of the queried table, one could pass (a single or) a list of values to limit the query to a subset of matches. In code, this adds a `WHERE <column_name> in (values)` clause to the query.  
+This behaves differently depending on a few simple conditions:
+  - if the column is of a numeric type AND the query is a list of two elements:
+    it will return the range of matches between the two list elements (inclusive)
+    i.e. `WHERE <column_name> >= value[0] AND <column_name> <= value[0]`
+    if one of these values is an empty string, it will be removed from the clause
+    e.g. the list `['', 99]` will produce a `WHERE <column_name> <= value[0]` clause
+
+  - if the column is a character-based type (varchar, text):
+    it will return all values matching exactly the ones on the list provided
+    i.e. `WHERE <column_name> in (values)`
 
 ### GET Request
 
@@ -126,7 +136,15 @@ GET requests to any `/data/<table>` path get resolved by translating them to a c
 
 - The path remains the same.
 - Any URL parameters in the GET request are sent as part of the JSON payload of the POST request. Example: `?param_one=one&param_two=two&param_three=three` will send a `{"param_one":"one","param_two":"two","param_three":"three"}` payload.
-- All parameters are mapped as string values and no further syntactic transformations are considered at the moment.
+- All parameters are mapped as string values.
+If the string contains commas, it will be split into a list and sent as such.
+This is useful for queries where you want to get values that match a specific set.
+Note that if you're querying against a column with a numeric type the way this list is handled by the POST request allows you to easily query ranges of values. Examples:
+  - greater than:
+    `some_column=1234,` will become `some_column:['1234', '']` in the POST request, which will become a `WHERE some_column >= 1234` clause
+
+  - less than:
+    `some_column=,1234` will become `some_column:['', '1234']` in the POST request, which will become a `WHERE some_column <= 1234` clause
 
 GET requests are meant for trivial queries to the db and one big difference against POST requests is that all of them are cached for (at least) a day.
 
@@ -151,6 +169,13 @@ Same query using a GET request and default field values:
 ```sh
 curl -u 'serratus:serratus' https://api.serratus.io/data/rfamily?run_id=DRR000614,DRR001252
 ```
+
+Same query as before but now retrieving all values above (or equal) value for `percent_identity`:
+
+```sh
+curl -u 'serratus:serratus' https://api.serratus.io/data/rfamily?percent_identity=60&run_id=DRR000614,DRR001252
+```
+
 
 Sample response:
 
