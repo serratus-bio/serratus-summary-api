@@ -93,7 +93,7 @@ def data_query(arguments):
         if(_key in arguments):
             if(not isinstance(arguments[_key], list)):
                 arguments[_key] = [arguments[_key]]
-            
+
             if(hasattr(arguments['view'], _key)):
                 if(arguments['view'].__columns__[_key] in ['bigint', 'double precision']):
                     if(len(arguments[_key]) == 2):
