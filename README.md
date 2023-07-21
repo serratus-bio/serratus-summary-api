@@ -124,7 +124,7 @@ This behaves differently depending on a few simple conditions:
     it will return the range of matches between the two list elements (inclusive)
     i.e. `WHERE <column_name> >= value[0] AND <column_name> <= value[0]`
     if one of these values is an empty string, it will be removed from the clause
-    e.g. the list `['', 99]` will produce a `WHERE <column_name> <= value[0]` clause
+    e.g. the list `['', 99]` will produce a `WHERE <column_name> <= value[1]` clause
 
   - if the column is a character-based type (varchar, text):
     it will return all values matching exactly the ones on the list provided
@@ -170,7 +170,7 @@ Same query using a GET request and default field values:
 curl -u 'serratus:serratus' https://api.serratus.io/data/rfamily?run_id=DRR000614,DRR001252
 ```
 
-Same query as before but now retrieving all values above (or equal) value for `percent_identity`:
+Same query as before but now retrieving all matches above (or equal) to a certain value for `percent_identity`:
 
 ```sh
 curl -u 'serratus:serratus' https://api.serratus.io/data/rfamily?percent_identity=60&run_id=DRR000614,DRR001252
@@ -199,7 +199,7 @@ Sample response:
 }
 ```
 
-Errors look like:
+Errors look like this:
 
 ```sh
 {
@@ -207,4 +207,4 @@ Errors look like:
 }
 ```
 
-For examples on how to make HTTP requests in your favorite framework/language, take a look at [this site](https://www.google.com).
+HTTP requests will most likely wotk with your favorite framework/language, to get started on that, search for something [like this](https://https://www.google.com/search?q=how+to+make+http+requests+in+python).

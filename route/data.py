@@ -47,7 +47,6 @@ import time
 
 # INIT
 SQLAlchemyEngine = create_engine(current_app.config['SQLALCHEMY_DATABASE_URI'], echo=True)
-SQLAlchemySession = sessionmaker(bind=SQLAlchemyEngine)()
 auth = HTTPBasicAuth()
 cache = Cache(current_app)
 
@@ -81,7 +80,7 @@ def data_query(arguments):
         arguments['_offset'] = 0
 
     data_query = (
-        SQLAlchemySession
+        sessionmaker(bind=SQLAlchemyEngine)()
             .query(arguments['view'])
             .with_entities(*list_attributes_of_model(arguments['view']))
     )
@@ -143,7 +142,7 @@ def GET_data_view(view):
         if(isinstance(value, str) and ',' in value):
             request.args[key] = value.split(',')
     
-    if(cache.get(request.full_path) == None):
+    if(cache.get(request.full_path) == None or True): # X
         _data_query = data_query({ **{ 'view':view }, **request.args })
 
         cache.set(request.full_path, _data_query)
