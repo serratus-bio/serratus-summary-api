@@ -20,7 +20,10 @@ def model_from_table(name, __tablename__=None, primary_keys=None):
 
     connection = SQLAlchemyEngine.connect()
 
-    columns = connection.execute('SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = \'public\' AND table_name = \'' + __tablename__ + '\' ORDER BY ordinal_position ASC;').all()
+    stmt = 'SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = \'public\' AND table_name = \'' + __tablename__ + '\' ORDER BY ordinal_position ASC;'
+    # print('stmt', stmt)
+    columns = connection.execute(stmt).all()
+    connection.close()
 
     for key, value in columns:
         if value not in type_to_sqlalchemy_type:
