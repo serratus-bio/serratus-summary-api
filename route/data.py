@@ -160,8 +160,7 @@ def GET_data_view(view):
         if(isinstance(value, str) and ',' in value):
             request.args[key] = value.split(',')
     
-    if(cache.get(request.full_path) == None or True): # X
-        print('...')
+    if(cache.get(request.full_path) == None):
         _data_query = data_query({ **{ 'view':view }, **request.args })
 
         cache.set(request.full_path, _data_query)
