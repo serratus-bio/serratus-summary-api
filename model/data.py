@@ -21,7 +21,6 @@ def model_from_table(name, __tablename__=None, primary_keys=None):
     connection = SQLAlchemyEngine.connect()
 
     stmt = 'SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = \'public\' AND table_name = \'' + __tablename__ + '\' ORDER BY ordinal_position ASC;'
-    # print('stmt', stmt)
     columns = connection.execute(stmt).all()
     connection.close()
 
