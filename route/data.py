@@ -46,7 +46,7 @@ import time
 
 
 # INIT
-SQLAlchemyEngine = create_engine(current_app.config['SQLALCHEMY_DATABASE_URI'], echo=True)
+SQLAlchemyEngine = create_engine(current_app.config['SQLALCHEMY_DATABASE_URI'], echo=True, max_overflow=32, pool_size=32)
 auth = HTTPBasicAuth()
 cache = Cache(current_app)
 
