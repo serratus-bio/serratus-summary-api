@@ -85,8 +85,9 @@ def data_query(arguments):
     if('_offset' not in arguments):
         arguments['_offset'] = 0
 
+    data_session = sessionmaker(bind=SQLAlchemyEngine)()
     data_query = (
-        sessionmaker(bind=SQLAlchemyEngine)()
+        data_session
             .query(arguments['view'])
             .with_entities(*list_attributes_of_model(arguments['view']))
     )
@@ -111,6 +112,8 @@ def data_query(arguments):
 
                 if(arguments['view'].__columns__[_key] in ['text']):
                     data_query = data_query.where(getattr(arguments['view'], _key).in_(arguments[_key]))
+    
+    data_session.close()
 
     if('_count' in arguments):
         return (
