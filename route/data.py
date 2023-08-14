@@ -69,7 +69,8 @@ model_dict = {
     'rfamily': model_from_table(name='rfamily', primary_keys=('run_id')),
     'rphylum': model_from_table(name='rphylum', primary_keys=('run_id')),
     'rsequence': model_from_table(name='rsequence', primary_keys=('run_id')),
-    'rsra': model_from_table(name='rsra', primary_keys=('run_id'))
+    'rsra': model_from_table(name='rsra', primary_keys=('run_id')),
+    'srarun': model_from_table(name='srarun', primary_keys=('run'))
 }
 
 
