@@ -89,11 +89,6 @@ def data_query(arguments):
         arguments['_offset'] = 0
 
     data_session = sessionmaker(bind=SQLAlchemyEngine)()
-
-    data_entities = list_attributes_of_model(arguments['view'])
-    if('_columns' in arguments):
-        data_entities = list(map(lambda x: getattr(arguments['view'], x), filter(lambda x: hasattr(arguments['view'], x), arguments['_columns'])))
-
     data_query = (
         data_session
             .query(arguments['view'])
