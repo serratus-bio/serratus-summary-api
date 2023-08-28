@@ -127,15 +127,6 @@ def data_query(arguments):
     data_session.close()
 
     if('_count' in arguments):
-        print('memoize query')
-        stmt = 'SELECT count(*) as count_1 FROM(' + sub('\n', '', str(data_query.statement.compile(dialect=postgresql.dialect()))) + ') AS anon_1'
-        stmt_md5 = md5(stmt.encode('utf-8')).hexdigest()
-        print('-->', stmt, stmt_md5)
-
-        # check if it's there
-        # if it's not calculate and store
-        # return value
-
         return (
             data_query
                 .count()
