@@ -1,7 +1,10 @@
 from flask import current_app, jsonify, request
 from flask_caching import Cache
 from flask_httpauth import HTTPBasicAuth
+from hashlib import md5
+from re import sub
 from sqlalchemy import create_engine
+from sqlalchemy.dialects import postgresql
 from sqlalchemy.orm import Session, attributes, sessionmaker
 
 import time
@@ -89,7 +92,7 @@ def data_query(arguments):
     data_query = (
         data_session
             .query(arguments['view'])
-            .with_entities(*list_attributes_of_model(arguments['view']))
+            .with_entities(*data_entities)
     )
     
     # .where
@@ -116,6 +119,15 @@ def data_query(arguments):
     data_session.close()
 
     if('_count' in arguments):
+        print('memoize query')
+        stmt = 'SELECT count(*) as count_1 FROM(' + sub('\n', '', str(data_query.statement.compile(dialect=postgresql.dialect()))) + ') AS anon_1'
+        stmt_md5 = md5(stmt.encode('utf-8')).hexdigest()
+        print('-->', stmt, stmt_md5)
+
+        # check if it's there
+        # if it's not calculate and store
+        # return value
+
         return (
             data_query
                 .count()
