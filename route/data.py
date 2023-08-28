@@ -138,12 +138,12 @@ def data_query(arguments):
                 .count()
         )
     else:
-        return (
-            data_query
-                .offset(arguments['_offset'])
-                .limit(arguments['_limit'])
-                .all()
-        )
+        if(arguments['_offset'] != '0'):
+            data_query = data_query.offset(arguments['_offset'])
+        if(arguments['_limit'] != '0'):
+            data_query = data_query.limit(arguments['_limit'])
+        
+        return data_query.all()
 
 def data_return(data):
     if(isinstance(data, int)):
