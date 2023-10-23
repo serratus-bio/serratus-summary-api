@@ -14,15 +14,21 @@ type_to_sqlalchemy_type = {
 }
 
 # no auto-primary_keys due to permissions (?)
-def model_from_table(name, __tablename__=None, primary_keys=None):
+def model_from_table(name, __tablename__=None, columns=None, primary_keys=None):
     if(__tablename__ is None):
         __tablename__ = name
 
-    connection = SQLAlchemyEngine.connect()
+    if(columns is None):
+        connection = SQLAlchemyEngine.connect()
+        stmt = 'SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = \'public\' AND table_name = \'' + __tablename__ + '\' ORDER BY ordinal_position ASC;'
+        columns = connection.execute(stmt).all()
 
-    stmt = 'SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = \'public\' AND table_name = \'' + __tablename__ + '\' ORDER BY ordinal_position ASC;'
-    columns = connection.execute(stmt).all()
-    connection.close()
+        if(len(columns) == 0):
+            # try a materialized view
+            stmt = 'SELECT attname AS column_name, format_type(atttypid, atttypmod) AS data_type FROM pg_attribute WHERE attrelid = \'' + __tablename__ + '\'::regclass AND attnum > 0;'
+            columns = connection.execute(stmt).all()
+        
+        connection.close()
 
     for key, value in columns:
         if value not in type_to_sqlalchemy_type:
